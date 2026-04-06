@@ -1,57 +1,61 @@
 #panel {
-	margin-left: 15px;
-	padding: 5px;
-	width: 500px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	}
-	
-#panel>a {
-	margin-top: 5px;
-	margin-bottom: 40px;
-	margin-right: 5px;
-	padding: 10px;
-	border: 1px solid #4269FF;
-	border-radius: 10px;
-	color: #4269FF;
-	text-decoration: none;
-	align-self: flex-end;
-	}
-	
-#panel .button {
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 6px;
-	padding: 15px;
-	width: 50%;
-	border: none;
-	border-radius: 10px;
-	background: #4269FF;
-	font-size: 1.3rem;
-	color: #FFFFFF;
-	transition: background .5s linear;
-	}
-	
-#panel .button:hover {
-	background: #008FFF;
-	}
-	
-#panel .save {
-	margin-top: 40px;
-	margin-left: 10px;
-	padding: 20px;
-	border-radius: 10px;
-	background: #0000FF;
-	font-size: 1.4rem;
-	color: #FFFFFF;
-	white-space: nowrap;
-	transition: transform .3s linear;
-	align-self: flex-start;
-	}
-	
-#panel .save:last-child:hover {
-	transform: scale(1.3, 1.3);
-	}
+  margin-left: 15px;
+  padding: 5px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
+#panel > a {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-right: 5px;
+  padding: 10px;
+  border: 1px solid #4269ff;
+  border-radius: 10px;
+  color: #4269ff;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+#panel>a:hover {
+  border-color: #0000ff;
+  color: #0000ff;
+}
+
+#panel .button {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 50%;
+  border: none;
+  border-radius: 10px;
+  background: #4269ff;
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: background 0.2s linear;
+}
+
+#panel .button:hover {
+  background: #ffe600;
+}
+
+#panel .save {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #0000ff;
+  font-size: 1.4rem;
+  color: #ffffff;
+  white-space: nowrap;
+  transition: transform 0.3s linear;
+  align-self: center;
+}
+
+#panel .save:hover {
+  transform: scale(1.3, 1.3);
+}

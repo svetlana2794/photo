@@ -1,104 +1,138 @@
-import React, { useState,
-useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Color } from "fabric";
 
-import Radio from "./Radio.js";
 
-import { drawPencil,
-drawCircle,
-drawSpray } from "../../utils/drawBrush.js";
+import { drawPencil, drawCircle, drawSpray } from "../../utils/drawBrush.js";
 
 import { useStore } from "../../utils/store.js";
 
 import "./styles.css";
 
 function Brush() {
-const [brushObj, setBrushObj]=useState(null);
-const [value, setValue]=useState(null);
-const [color, setColor]=useState("#FF0000");
-const [alpha, setAlpha]=useState(1);
-const [brushSize, setBrushSize]=useState(5);
-const canvas=useStore((state) => state.canvas);
-const selObj=useStore((state) => state.selObj);
+  const [brushObj, setBrushObj] = useState(null);
+  const [value, setValue] = useState(null);
+  const [color, setColor] = useState("#FF0000");
+  const [alpha, setAlpha] = useState(1);
+  const [brushSize, setBrushSize] = useState(5);
+  const canvas = useStore((state) => state.canvas);
+  const selObj = useStore((state) => state.selObj);
 
-useEffect(() => {
-setBrushObj(null);
-setValue(null);
-setColor("#FF0000");
-setAlpha(1);
-setBrushSize(5);
-}, [selObj]);
+  useEffect(() => {
+    setBrushObj(null);
+    setValue(null);
+    setColor("#FF0000");
+    setAlpha(1);
+    setBrushSize(5);
+  }, [selObj]);
 
-function handleChange(e) {
-setColor("#FF0000");
-setAlpha(1);
-setBrushSize(5);
-setValue(e.target.value);
-switch (e.target.value) {
-	case "pencil":
-	setBrushObj(drawPencil(canvas));
-	break;
-	case "circle":
-	setBrushObj(drawCircle(canvas));
-	break;
-	case "spray":
-	setBrushObj(drawSpray(canvas));
-	break;
-	}
-	}
+  function handleChange(e) {
+    setColor("#FF0000");
+    setAlpha(1);
+    setBrushSize(5);
+    setValue(e.target.value);
+    switch (e.target.value) {
+      case "pencil":
+        setBrushObj(drawPencil(canvas));
+        break;
+      case "circle":
+        setBrushObj(drawCircle(canvas));
+        break;
+      case "spray":
+        setBrushObj(drawSpray(canvas));
+        break;
+    }
+  }
 
-function handleColor(e) {
-setColor(e.target.value);
-setFill({c: e.target.value});
-}
+  function handleColor(e) {
+    setColor(e.target.value);
+    setFill({ c: e.target.value });
+  }
 
-function handleAlpha(e) {
-setAlpha(e.target.value);
-setFill({a: e.target.value});
-}
+  function handleAlpha(e) {
+    setAlpha(e.target.value);
+    setFill({ a: e.target.value });
+  }
 
-function setFill({c=color, a=alpha}) {
-let col=new Color(c).toRgba();
-brushObj.color=col.replace(/1(?=\))/, a);
-canvas.requestRenderAll();
-}
+  function setFill({ c = color, a = alpha }) {
+    let col = new Color(c).toRgba();
+    brushObj.color = col.replace(/1(?=\))/, a);
+    canvas.requestRenderAll();
+  }
 
-function handleSizeBrush(e) {
-setBrushSize(+e.target.value);
-brushObj.width=+e.target.value;
-canvas.requestRenderAll();
-}
+  function handleSizeBrush(e) {
+    setBrushSize(+e.target.value);
+    brushObj.width = +e.target.value;
+    canvas.requestRenderAll();
+  }
 
-let style={
-width: brushSize+"px",
-height: brushSize+"px",
-background: color,
-opacity: alpha
-}
+  let style = {
+    width: brushSize + "px",
+    height: brushSize + "px",
+    background: color,
+    opacity: alpha,
+  };
 
-return (
-<>
-<label style={{backgroundColor: value=='pencil' ? '#1949FF' : '#6988FF'}}>
-<input type="radio" checked={value=="pencil" ? true : false} value={"pencil"} onChange={handleChange}/>Кисть
-</label>
-<label style={{backgroundColor: value=='circle' ? '#1949FF' : '#6988FF'}}>
-<input type="radio" checked={value=="circle" ? true : false} value={"circle"} onChange={handleChange}/>Круги
-</label>
-<label style={{backgroundColor: value=='spray' ? '#1949FF' : '#6988FF'}}>
-<input type="radio" checked={value=="spray" ? true : false}  value={"spray"} onChange={handleChange}/>Спрей
-</label>
-<br/>
-<label className="label">Цвет: </label>
-<input type="color" onChange={handleColor} value={color}/>
-<br/>
-<label className="label">Прозрачность: </label>
-<input type="range" onChange={handleAlpha} value={alpha} min="0" max="1" step="0.1"/>
-<br/>
-<label className="label">Размер кисти: </label>
-<input type="range" min="1" max="20" step="1" value={brushSize} onChange={handleSizeBrush}/>
-<span style={style}/>
-</>
-);
+  return (
+    <>
+      <label
+        style={{ backgroundColor: value == "pencil" ? "#1949FF" : "#6988FF" }}
+      >
+        <input
+          type="radio"
+          checked={value == "pencil" ? true : false}
+          value={"pencil"}
+          onChange={handleChange}
+        />
+        Кисть
+      </label>
+      <label
+        style={{ backgroundColor: value == "circle" ? "#1949FF" : "#6988FF" }}
+      >
+        <input
+          type="radio"
+          checked={value == "circle" ? true : false}
+          value={"circle"}
+          onChange={handleChange}
+        />
+        Круги
+      </label>
+      <label
+        style={{ backgroundColor: value == "spray" ? "#1949FF" : "#6988FF" }}
+      >
+        <input
+          type="radio"
+          checked={value == "spray" ? true : false}
+          value={"spray"}
+          onChange={handleChange}
+        />
+        Спрей
+      </label>
+      <br />
+      <label className="label">Цвет: </label>
+      <input type="color" onChange={handleColor} value={color} />
+      <br />
+      <label className="label">Прозрачность: </label>
+      <input
+        type="range"
+        onChange={handleAlpha}
+        value={alpha}
+        min="0"
+        max="1"
+        step="0.1"
+      />
+      <br />
+      <label className="label">Размер кисти: </label>
+      <input
+        type="range"
+        min="1"
+        max="20"
+        step="1"
+        value={brushSize}
+        onChange={handleSizeBrush}
+      />
+      <span style={style} />
+    </>
+  );
 }
 
 export default Brush;

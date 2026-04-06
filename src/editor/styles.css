@@ -1,15 +1,13 @@
 #editor {
-	height: 900px;
-	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-	position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: relative;
 }
 
-#editor>div:first-of-type {
-	margin: 25px;
-	border: 1px solid #000000;
-	background: #FFFFFF;
-	align-self: center;
+#editor > div:first-of-type {
+  margin: 25px;
+  border: 1px solid #000000;
+  background: #ffffff;
+  align-self: center;
 }
-

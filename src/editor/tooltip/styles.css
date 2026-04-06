@@ -1,32 +1,32 @@
 button#help {
-	height: 40px;
-	width: 40px;
-	border: 1px solid #4269FF;
-	border-radius: 50%;
-	background: #FFFFFF;
-	position: absolute;
-	bottom: 10px;
-	right: 0;
-	}
+  height: 40px;
+  width: 40px;
+  border: 1px solid #4269ff;
+  border-radius: 50%;
+  background: #ffffff;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
 
 .tooltip {
-	padding: 5px 10px;
-	width: 200px;
-	background: #4269FF;
-	color: #FFFFFF;
-	text-align: left;
-	display: none;
-	position: absolute;
-	bottom: 10px;
-	right: 45px;
-	box-shadow: 0px 0px 10px 5px #4269FF;
-	transition: display .5s linear;
+  padding: 5px 10px;
+  width: 200px;
+  background: #4269ff;
+  color: #ffffff;
+  text-align: left;
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 45px;
+  box-shadow: 0px 0px 10px 5px #4269ff;
+  transition: display 0.5s linear;
 }
 
 .tooltip mark {
-	padding: 5px;
-	border-radius: 5px;
-	background: #0000FF;
-	color: #FFFFFF;
-	display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  background: #0000ff;
+  color: #ffffff;
+  display: inline-block;
 }
