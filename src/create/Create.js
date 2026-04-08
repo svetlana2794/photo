@@ -1,32 +1,28 @@
 import React from "react";
 import { Form } from "react-router-dom";
+import { Dropdown } from 'primereact/dropdown';
+
 
 import "./styles.css";
 
 function Create() {
+	const size = [300, 400, 500, 600, 700, 800];
+
   return (
     <div id="create">
       <h3>Размер холста</h3>
       <Form method="post">
         <label>Ширина: </label>
-        <select name="width">
-          <option>300</option>
-          <option>400</option>
-          <option>500</option>
-          <option>600</option>
-          <option>700</option>
-          <option>800</option>
-        </select>
+        <Dropdown
+  name="width"
+  options={size}
+/>
         <br />
         <label>Высота: </label>
-        <select name="height">
-          <option>300</option>
-          <option>400</option>
-          <option>500</option>
-          <option>600</option>
-          <option>700</option>
-          <option>800</option>
-        </select>
+        Dropdown
+  name="height"
+  options={size}
+/>
         <br />
         <button>Создать</button>
       </Form>
