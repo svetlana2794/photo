@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Knob } from 'primereact';
 
 import Fill from "../fill/Fill.js";
 import { useStore } from "../../utils/store.js";
@@ -28,14 +29,7 @@ function Stroke() {
     <>
       <Fill prop={"stroke"} />
       <label className="label">Ширина: </label>
-      <input
-        type="range"
-        value={width}
-        min="1"
-        max="10"
-        step="1"
-        onChange={handleWidth}
-      />
+      <Knob value={alpha} onChange={(e) => setAlpha(e.value)} min={1} max={10} step={1}/>
     </>
   );
 }

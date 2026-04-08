@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ColorPicker, Knob } from 'primereact';
 import { Color } from "fabric";
 
 import { useStore } from "../../utils/store.js";
@@ -41,17 +42,11 @@ function Fill({ prop }) {
   return (
     <>
       <label className="label">Цвет: </label>
-      <input type="color" onChange={handleColor} value={color} />
+      <ColorPicker value={color} onChange={(e) => setColor(e.value)} inline/>
+
       <br />
       <label className="label">Прозрачность: </label>
-      <input
-        type="range"
-        onChange={handleAlpha}
-        value={alpha}
-        min="0"
-        max="1"
-        step="0.1"
-      />
+      <Knob value={alpha} onChange={(e) => setAlpha(e.value)} min={0} max={1} step={0.1}/>
       <br />
     </>
   );
