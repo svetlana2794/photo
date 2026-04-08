@@ -19,7 +19,7 @@ function Create() {
 />
         <br />
         <label>Высота: </label>
-        Dropdown
+        <Dropdown
   name="height"
   options={size}
 />
