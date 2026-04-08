@@ -1,4 +1,4 @@
-import Reatc, { useState } from "react";
+import React, { useState } from "react";
 import { Form } from "react-router-dom";
 import { Dropdown } from 'primereact';
 
