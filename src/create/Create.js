@@ -1,6 +1,6 @@
 import React from "react";
 import { Form } from "react-router-dom";
-import { Dropdown } from 'dropdown.esm.js';
+import { Dropdown } from 'primereact';
 
 
 import "./styles.css";
