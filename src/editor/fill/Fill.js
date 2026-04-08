@@ -5,7 +5,7 @@ import { Color } from "fabric";
 import { useStore } from "../../utils/store.js";
 
 function Fill({ prop }) {
-  const [color, setColor] = useState("#FFFFFF");
+  const [color, setColor] = useState("FFFFFF");
   const [alpha, setAlpha] = useState(1);
   const canvas = useStore((state) => state.canvas);
   const selObj = useStore((state) => state.selObj);
@@ -13,12 +13,12 @@ function Fill({ prop }) {
   useEffect(() => {
     if (selObj) {
       let color = new Color(selObj.get(prop));
-      setColor("#" + color.toHex());
+      setColor(color.toHex());
       setAlpha(color.getAlpha());
     }
 
     return () => {
-      setColor("#FFFFFF");
+      setColor("FFFFFF");
       setAlpha(1);
     };
   }, [selObj]);
