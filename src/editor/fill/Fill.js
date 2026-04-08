@@ -29,7 +29,7 @@ function Fill({ prop }) {
   }
 
   function handleAlpha(e) {
-    setAlpha(e.target.value);
+    setAlpha(+e.target.value);
     setFill({ a: e.target.value });
   }
 
@@ -42,11 +42,11 @@ function Fill({ prop }) {
   return (
     <>
       <label className="label">Цвет: </label>
-      <ColorPicker value={color} onChange={(e) => setColor(e.value)} inline/>
+      <ColorPicker value={color} onChange={handleColor} inline/>
 
       <br />
       <label className="label">Прозрачность: </label>
-      <Knob value={alpha} onChange={(e) => setAlpha(e.value)} min={0} max={1} step={0.1}/>
+      <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       <br />
     </>
   );
