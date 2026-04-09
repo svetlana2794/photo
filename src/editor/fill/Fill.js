@@ -29,8 +29,8 @@ function Fill({ prop }) {
   }
 
   function handleAlpha(e) {
-    setAlpha(e.value);
-    setFill({ a: e.value });
+    setAlpha(e.value/10);
+    setFill({ a: e.value/10 });
   }
 
   function setFill({ c = color, a = alpha }) {
@@ -46,7 +46,7 @@ function Fill({ prop }) {
 
       <br />
       <label className="label">Прозрачность: </label>
-      <Knob value={alpha} onChange={handleAlpha} min={0.0} max={1.0} step={1/10}/>
+      <Knob value={alpha} onChange={handleAlpha} min={0} max={10} step={1}/>
       <br />
     </>
   );
