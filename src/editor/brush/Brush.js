@@ -91,7 +91,7 @@ function Brush() {
       <br />
       <label className="label">Размер кисти: </label>
       
-<Slider value={brushSize} onChange={handleSizeBrush} min={1} max={20} step={1}/>
+
 
       <span style={style} />
     </>
