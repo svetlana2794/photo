@@ -20,7 +20,7 @@ function Stroke() {
   }, [selObj]);
 
   function handleWidth(e) {
-    setWidth(e.target.value);
+    setWidth(+e.target.value);
     selObj.set("strokeWidth", +e.target.value);
     canvas.requestRenderAll();
   }
@@ -29,7 +29,7 @@ function Stroke() {
     <>
       <Fill prop={"stroke"} />
       <label className="label">Ширина: </label>
-      <Knob value={width} onChange={(e) => setWidth(e.value)} min={1} max={10} step={1}/>
+      <Knob value={width} onChange={handleWidth} min={1} max={10} step={1}/>
     </>
   );
 }
