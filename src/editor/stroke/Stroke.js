@@ -20,8 +20,8 @@ function Stroke() {
   }, [selObj]);
 
   function handleWidth(e) {
-    setWidth(+e.target.value);
-    selObj.set("strokeWidth", +e.target.value);
+    setWidth(e.target.value);
+    selObj.set("strokeWidth", e.target.value);
     canvas.requestRenderAll();
   }
 
