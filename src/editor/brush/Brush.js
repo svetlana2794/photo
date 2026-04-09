@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Knob, Button, Slider, ColorPicker } from 'primereact';
 import { Color } from "fabric";
 
 
@@ -11,7 +12,7 @@ import "./styles.css";
 function Brush() {
   const [brushObj, setBrushObj] = useState(null);
   const [value, setValue] = useState(null);
-  const [color, setColor] = useState("#FF0000");
+  const [color, setColor] = useState("FF0000");
   const [alpha, setAlpha] = useState(1);
   const [brushSize, setBrushSize] = useState(5);
   const canvas = useStore((state) => state.canvas);
@@ -20,17 +21,17 @@ function Brush() {
   useEffect(() => {
     setBrushObj(null);
     setValue(null);
-    setColor("#FF0000");
+    setColor("FF0000");
     setAlpha(1);
     setBrushSize(5);
   }, [selObj]);
 
-  function handleChange(e) {
-    setColor("#FF0000");
+  function handleChange(v) {
+    setColor("FF0000");
     setAlpha(1);
     setBrushSize(5);
-    setValue(e.target.value);
-    switch (e.target.value) {
+    setValue(v);
+    switch (v) {
       case "pencil":
         setBrushObj(drawPencil(canvas));
         break;
@@ -49,8 +50,8 @@ function Brush() {
   }
 
   function handleAlpha(e) {
-    setAlpha(e.target.value);
-    setFill({ a: e.target.value });
+    setAlpha(+e.value.toFixed(2));
+    setFill({ a: +e.value.toFixed(2) });
   }
 
   function setFill({ c = color, a = alpha }) {
@@ -74,62 +75,24 @@ function Brush() {
 
   return (
     <>
-      <label
-        style={{ backgroundColor: value == "pencil" ? "#1949FF" : "#6988FF" }}
-      >
-        <input
-          type="radio"
-          checked={value == "pencil" ? true : false}
-          value={"pencil"}
-          onChange={handleChange}
-        />
-        Кисть
-      </label>
-      <label
-        style={{ backgroundColor: value == "circle" ? "#1949FF" : "#6988FF" }}
-      >
-        <input
-          type="radio"
-          checked={value == "circle" ? true : false}
-          value={"circle"}
-          onChange={handleChange}
-        />
-        Круги
-      </label>
-      <label
-        style={{ backgroundColor: value == "spray" ? "#1949FF" : "#6988FF" }}
-      >
-        <input
-          type="radio"
-          checked={value == "spray" ? true : false}
-          value={"spray"}
-          onChange={handleChange}
-        />
-        Спрей
-      </label>
+    <span className="p-buttonset">
+<Button label="Кисть" onClick={handleChange("pencil")} />
+<Button label="Круги" onClick={handleChange("circle")} />
+<Button label="Спрей" onClick={handleChange("spray")} />
+
+</span>
+        
       <br />
-      <label className="label">Цвет: </label>
-      <input type="color" onChange={handleColor} value={color} />
+     <label className="label">Цвет: </label>
+      <ColorPicker value={color} onChange={handleColor} inline/>
       <br />
       <label className="label">Прозрачность: </label>
-      <input
-        type="range"
-        onChange={handleAlpha}
-        value={alpha}
-        min="0"
-        max="1"
-        step="0.1"
-      />
+      <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       <br />
       <label className="label">Размер кисти: </label>
-      <input
-        type="range"
-        min="1"
-        max="20"
-        step="1"
-        value={brushSize}
-        onChange={handleSizeBrush}
-      />
+      
+<Slider value={brushSize} onChange={handleSizeBrush} min={1} max={20} step={1}/>
+
       <span style={style} />
     </>
   );
