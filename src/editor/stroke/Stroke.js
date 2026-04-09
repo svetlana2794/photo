@@ -11,7 +11,7 @@ function Stroke() {
 
   useEffect(() => {
     if (selObj) {
-      setWidth(+selObj.get("strokeWidth"));
+      setWidth(selObj.get("strokeWidth"));
     }
 
     return () => {
@@ -20,8 +20,8 @@ function Stroke() {
   }, [selObj]);
 
   function handleWidth(e) {
-    setWidth(e.target.value);
-    selObj.set("strokeWidth", e.target.value);
+    setWidth(e.value);
+    selObj.set("strokeWidth", e.value);
     canvas.requestRenderAll();
   }
 
