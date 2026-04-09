@@ -30,7 +30,7 @@ function Fill({ prop }) {
 
   function handleAlpha(e) {
     setAlpha(+e.target.value);
-    setFill({ a: e.target.value });
+    setFill({ a: +e.target.value });
   }
 
   function setFill({ c = color, a = alpha }) {
