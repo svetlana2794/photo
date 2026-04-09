@@ -11,7 +11,7 @@ function Stroke() {
 
   useEffect(() => {
     if (selObj) {
-      setWidth(selObj.get("strokeWidth"));
+      setWidth(+selObj.get("strokeWidth"));
     }
 
     return () => {

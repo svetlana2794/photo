@@ -14,7 +14,7 @@ function Fill({ prop }) {
     if (selObj) {
       let color = new Color(selObj.get(prop));
       setColor(color.toHex());
-      setAlpha(color.getAlpha());
+      setAlpha(+color.getAlpha());
     }
 
     return () => {
