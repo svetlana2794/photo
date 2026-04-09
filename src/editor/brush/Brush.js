@@ -61,8 +61,8 @@ function Brush() {
   }
 
   function handleSizeBrush(e) {
-    setBrushSize(+e.target.value);
-    brushObj.width = +e.target.value;
+    setBrushSize(+e.value);
+    brushObj.width = +e.value;
     canvas.requestRenderAll();
   }
 
