@@ -90,6 +90,7 @@ function Brush() {
     min={1}
     max={20}
     step={1}
+    className="my-slider"
 />
       
     </>
