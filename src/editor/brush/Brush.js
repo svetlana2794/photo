@@ -98,6 +98,7 @@ function Brush() {
     max={20}
     step={1}
     style={{ height: '150px' }}
+    orientation="vertical"
 />
       
     </>
