@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Knob, Button, Slider, ColorPicker } from 'primereact';
+import { Knob, SelectButton, Slider, ColorPicker } from 'primereact';
 import { Color } from "fabric";
 
 
@@ -17,6 +17,13 @@ function Brush() {
   const [brushSize, setBrushSize] = useState(5);
   const canvas = useStore((state) => state.canvas);
   const selObj = useStore((state) => state.selObj);
+  
+  const options = [
+        { label: 'Кисть', value: 'pencil' },
+        { label: 'Круги', value: 'circle' },
+        { label: 'Спрей', value: 'spray' }
+    ];
+    
 
   useEffect(() => {
     setBrushObj(null);
@@ -75,25 +82,9 @@ function Brush() {
 
   return (
     <>
-    <span className="p-buttonset">
-<Button label="Кисть" onClick={handleChange("pencil")} />
-<Button label="Круги" onClick={handleChange("circle")} />
-<Button label="Спрей" onClick={handleChange("spray")} />
-
-</span>
+    <SelectButton value={value} onChange={(e) => setValue(e.value)} options={options}/>
         
-      <br />
-     <label className="label">Цвет: </label>
-      <ColorPicker value={color} onChange={handleColor} inline/>
-      <br />
-      <label className="label">Прозрачность: </label>
-      <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
-      <br />
-      <label className="label">Размер кисти: </label>
       
-
-
-      <span style={style} />
     </>
   );
 }
