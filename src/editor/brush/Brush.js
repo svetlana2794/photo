@@ -93,12 +93,10 @@ function Brush() {
       
       <Slider
     value={brushSize}
-    onChange={(e) => handleSizeBrush}
+    onChange={handleSizeBrush}
     min={1}
     max={20}
     step={1}
-    style={{ height: '150px' }}
-    orientation="vertical"
 />
       
     </>
