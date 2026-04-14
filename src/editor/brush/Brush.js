@@ -91,6 +91,15 @@ function Brush() {
       <label className="label">Прозрачность: </label>
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       
+      <Slider
+    value={brushSize}
+    onChange={(e) => handleSizeBrush}
+    min={1}
+    max={20}
+    step={1}
+    style={{ height: '150px' }}
+/>
+      
     </>
   );
 }
