@@ -91,6 +91,10 @@ function Brush() {
     max={20}
     step={1}
     className="my-slider"
+    style={{
+        '--handle-width': `${20 + value * 0.1}px`,
+        '--handle-height': `${20 + value * 0.1}px`
+    }}
 />
       
     </>
