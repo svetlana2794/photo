@@ -72,6 +72,13 @@ function Brush() {
     brushObj.width = e.value;
     canvas.requestRenderAll();
   }
+  
+  let style={
+width: brushSize+"px",
+height: brushSize+"px",
+background: color,
+opacity: alpha
+}
 
   return (
     <>
@@ -91,10 +98,6 @@ function Brush() {
     max={20}
     step={1}
     className="my-slider"
-    style={{
-        '--handle-width': `${20 + value * 0.1}px`,
-        '--handle-height': `${20 + value * 0.1}px`
-    }}
 />
       
     </>

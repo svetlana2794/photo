@@ -1,4 +1,4 @@
-#create {
+.create {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   align-items: stretch;
 }
 
-#create > h3 {
+.create > h3 {
   margin: 30px;
   padding: 10px;
   font-size: 3rem;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-#create form {
+.create form {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-#create label {
+.create label {
   margin-bottom: 30px;
   padding: 10px;
   width: 30%;
@@ -30,7 +30,7 @@
   text-align: right;
 }
 
-#create select {
+.create .select {
   margin-bottom: 30px;
   padding: 10px;
   width: 40%;
@@ -40,11 +40,11 @@
   transition: border-color 0.5s linear;
 }
 
-#create select:focus {
+.create select:focus {
   border-color: #0000ff;
 }
 
-#create button {
+.create button {
   margin-top: 30px;
   padding: 10px;
   width: 30%;
@@ -56,6 +56,6 @@
   transition: background 0.5s linear;
 }
 
-#create button:hover {
+.create button:hover {
   background: #008fff;
 }

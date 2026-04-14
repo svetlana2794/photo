@@ -11,7 +11,7 @@ function Create() {
 	const [selectedHeight, setSelectedHeight] = useState(300);
 
   return (
-    <div id="create">
+    <div className="create">
       <h3>Размер холста</h3>
       <Form method="post">
         <label>Ширина: </label>
@@ -20,6 +20,7 @@ function Create() {
   onChange={(e) => setSelectedWidth(e.value)}
   name="width"
   options={size}
+  className="select"
 />
         <br />
         <label>Высота: </label>
@@ -28,6 +29,7 @@ function Create() {
   onChange={(e) => setSelectedHeight(e.value)}
   name="height"
   options={size}
+  className="select"
 />
         <br />
         <button>Создать</button>

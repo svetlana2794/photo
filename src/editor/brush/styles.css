@@ -1,6 +1,6 @@
 
 
-#brush .label {
+.brush .label {
   color: #000000;
   display: inline-block;
 }
@@ -10,8 +10,8 @@ width: 150px;
 }
 
 .my-slider .p-slider-handle {
-    width: var(--handle-width);
-    height: var(--handle-height);
-    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px; 
 }
 

@@ -11,12 +11,10 @@
 }
 
 #start {
-  width: 500px;
-  height: 500px;
   background-image: url("draw.jpg");
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: cover;
+  background-size: 100% auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
