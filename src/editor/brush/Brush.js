@@ -82,7 +82,7 @@ function Brush() {
 
   return (
     <>
-    <SelectButton value={value} onChange={(e) => setValue(e.value)} options={options}/>
+    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"/>
         
       
     </>
