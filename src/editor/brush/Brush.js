@@ -83,7 +83,13 @@ function Brush() {
   return (
     <>
     <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"/>
-        
+     
+     <label className="label">Цвет: </label>
+      <ColorPicker value={color} onChange={handleColor} inline/>
+
+      <br />
+      <label className="label">Прозрачность: </label>
+      <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       
     </>
   );
