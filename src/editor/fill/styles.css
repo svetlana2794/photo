@@ -1,3 +1,8 @@
-input[type="range"] {
-  width: 150px;
+.fill {
+display: flex;
+justify-content: flex-start;
 }
+
+.fill label {
+	text-align: center;
+	}

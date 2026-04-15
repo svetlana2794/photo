@@ -4,6 +4,8 @@ import { Knob } from 'primereact';
 import Fill from "../fill/Fill.js";
 import { useStore } from "../../utils/store.js";
 
+import "./styles.css"
+
 function Stroke() {
   const [width, setWidth] = useState(5);
   const canvas = useStore((state) => state.canvas);
@@ -26,11 +28,12 @@ function Stroke() {
   }
 
   return (
-    <>
+    <p className="stroke">
       <Fill prop={"stroke"} />
       <label className="label">Ширина: </label>
       <Knob value={width} onChange={handleWidth} min={0} max={10} step={1}/>
-    </>
+      Ширина </label>
+    </p>
   );
 }
 

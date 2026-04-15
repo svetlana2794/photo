@@ -37,7 +37,7 @@ function Text() {
   }, [selObj]);
 
   function handleText(e) {
-    selObj.set(e.name, e.value);
+    selObj.set(e.target.name, e.target.value);
     canvas.requestRenderAll();
   }
 

@@ -4,6 +4,8 @@ import { Color } from "fabric";
 
 import { useStore } from "../../utils/store.js";
 
+import "./styles.css"
+
 function Fill({ prop }) {
   const [color, setColor] = useState("FFFFFF");
   const [alpha, setAlpha] = useState(1);
@@ -40,15 +42,18 @@ function Fill({ prop }) {
   }
 
   return (
-    <>
-      <label className="label">Цвет: </label>
+    <p className="fill">
+      <label className="label">
       <ColorPicker value={color} onChange={handleColor} inline/>
-
+      <br/>
+Цвет </label>
       <br />
-      <label className="label">Прозрачность: </label>
+      <label className="label">
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       <br />
-    </>
+      Прозрачность </label>
+      
+    </p>
   );
 }
 

@@ -16,24 +16,19 @@
 
 .create form {
   padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 
-.create label {
-  margin-bottom: 30px;
-  padding: 10px;
-  width: 30%;
+.create span {
+  padding: 5px;
   font-size: 1.5rem;
   text-align: right;
+  display: inline-block;
 }
 
 .create .select {
   margin-bottom: 30px;
   padding: 10px;
-  width: 50%;
+  width: 10%;
   border: 1px solid #4269ff;
   border-radius: 5px;
   font-size: 1.5rem;

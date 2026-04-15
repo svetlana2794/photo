@@ -84,13 +84,17 @@ opacity: alpha
     <>
     <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"/>
      
-     <label className="label">Цвет: </label>
+     <p className="brushPanel">
+     <label>
       <ColorPicker value={color} onChange={handleColor} inline/>
+      Цвет</label>
 
       <br />
-      <label className="label">Прозрачность: </label>
+      <label>
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
+      Прозрачность </label>
       
+      <label>
       <Slider
     value={brushSize}
     onChange={handleSizeBrush}
@@ -99,7 +103,8 @@ opacity: alpha
     step={1}
     className="my-slider"
 />
-      
+Размер кисти: {brushSize} </label>
+      </p>
     </>
   );
 }

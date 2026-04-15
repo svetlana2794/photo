@@ -1,0 +1,8 @@
+.stroke {
+display: flex;
+justify-content: flex-start;
+}
+
+.stroke label {
+	text-align: center;
+	}

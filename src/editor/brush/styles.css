@@ -1,9 +1,11 @@
-
-
-.brush .label {
-  color: #000000;
-  display: inline-block;
+.brush .span {
+	padding: 10px;
+	border-color: #4269ff;
 }
+
+.brush label {
+	nargin: 10px;
+	}
 
 .my-slider {
 width: 150px;
@@ -13,5 +15,10 @@ width: 150px;
     width: 20px;
     height: 20px;
     margin-top: -10px; 
+}
+
+.brushPanel {
+	display: flex;
+justify-content: flex-start;
 }
 
