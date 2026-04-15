@@ -17,11 +17,6 @@ function Text() {
   const [checkUnder, setCheckUnder] = useState(false);
   
   const font = ["Times New Roman", "Monospace", "Arial"];
-  const options = [
-        { icon: 'Кисть', value: 'underline' },
-        { icon: 'Круги', value: 'linethrough' },
-        { icon: 'Спрей', value: 'overline' }
-    ];
 
   useEffect(() => {
     if (selObj) {
@@ -73,6 +68,8 @@ function Text() {
       <br />
       
       <ToggleButton
+      onLabel=""
+        offLabel=""
   checked={checkBold}
   value={!checkBold ? "bold" : "normal"}
   onChange={(e) => {
@@ -85,6 +82,8 @@ function Text() {
 />
       
       <ToggleButton
+      onLabel=""
+        offLabel=""
   checked={checkItalic}
    value={!checkItalic ? "italic" : "normal"}
   onChange={(e) => {
@@ -97,6 +96,8 @@ function Text() {
 />
       
       <ToggleButton
+      onLabel=""
+        offLabel=""
   checked={checkUnder}
   onChange={(e) => {
             setCheckUnder(!checkUnder);
