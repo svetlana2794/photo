@@ -37,12 +37,12 @@ function Text() {
   }, [selObj]);
 
   function handleText(e) {
-    selObj.set(e.target.name, e.target.value);
+    selObj.set(e.name, e.value);
     canvas.requestRenderAll();
   }
 
   function handleDecor(e) {
-    selObj.set(e.target.name, e.target.checked);
+    selObj.set(e.name, e.checked);
     canvas.requestRenderAll();
   }
 
