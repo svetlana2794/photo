@@ -30,7 +30,7 @@ function Stroke() {
   return (
     <p className="stroke">
       <Fill prop={"stroke"} />
-      <label className="label">Ширина: </label>
+      <label className="label">
       <Knob value={width} onChange={handleWidth} min={0} max={10} step={1}/>
       Ширина </label>
     </p>
