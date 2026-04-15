@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faB, faItalic, faUnderline } from "@fortawesome/free-solid-svg-icons";
-import { Dropdown, ToggleButton, Textarea } from 'primereact';
+import { Dropdown, ToggleButton, InputTextarea } from 'primereact';
 
 import { useStore } from "../../utils/store.js";
 
@@ -59,7 +59,7 @@ function Text() {
     <>
       <label className="label">Текст: </label>
       
-      <Textarea value={text} onChange={(e) => {
+      <InputTextarea value={text} onChange={(e) => {
           setText(e.target.value);
           handleText(e);
         }} name="text"/>
