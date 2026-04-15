@@ -30,8 +30,6 @@ function Text() {
       setCheckBold(selObj.get("fontWeight") == "bold" ? true : false);
       setCheckItalic(selObj.get("fontStyle") == "italic" ? true : false);
       setCheckUnder(selObj.get("underline"));
-      setCheckThrough(selObj.get("linethrough"));
-      setCheckOver(selObj.get("overline"));
     }
 
     return () => {
@@ -40,8 +38,6 @@ function Text() {
       setCheckBold(false);
       setCheckItalic(false);
       setCheckUnder(false);
-      setCheckThrough(false);
-      setCheckOver(false);
     };
   }, [selObj]);
 

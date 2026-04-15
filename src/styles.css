@@ -18,7 +18,7 @@ html {
 	}
 	
 address {
-	padding: 10px;
+	padding: 30px 20px 20px;
 	background-image: linear-gradient(to bottom, #FFFFFF, #8DACFF);
 	background-repeat: no-repeat;
 	text-align: center;
@@ -44,6 +44,7 @@ h1 {
 	font-weight: bold;
 	color: #FFE600;
 	text-align: center;
+	align-self: stretch;
 	text-shadow: 5px 0px 5px #0000FF, 0px 5px 5px #0000FF, -5px 0px 5px #0000FF, 0px -5px 5px #0000FF;
 	}
 
