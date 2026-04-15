@@ -105,7 +105,7 @@ function Text() {
   onChange={(e) => {
             setCheckUnder(!checkUnder);
             handleDecor(e);
-          }
+          }}
   onIcon={<FontAwesomeIcon icon={faUnderline} />}
   offIcon={<FontAwesomeIcon icon={faUnderline} />}
   name="underline"
