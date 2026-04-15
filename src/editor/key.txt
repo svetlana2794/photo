@@ -1,0 +1,97 @@
+import React, { useRef, useEffect } from 'react';
+import { fabric } from 'fabric';
+
+function FabricCanvasWithHotkeys() {
+  const canvasRef = useRef(null);
+  const fabricCanvasRef = useRef(null);
+
+  useEffect(() => {
+    // Инициализация холста
+    fabricCanvasRef.current = new fabric.Canvas('canvas', {
+      selection: true,
+      selectionKey: 'shiftKey'
+    });
+
+    // Добавляем тестовый прямоугольник
+    const rect = new fabric.Rect({
+      left: 100,
+      top: 100,
+      fill: 'red',
+      width: 100,
+      height: 100
+    });
+    fabricCanvasRef.current.add(rect);
+
+    // Устанавливаем фокус
+    fabricCanvasRef.current.upperCanvasEl.focus();
+
+    const handleKeyDown = (e) => {
+      const canvas = fabricCanvasRef.current;
+      const activeObject = canvas.getActiveObject();
+      e.preventDefault();
+
+      switch (e.key) {
+        case 'Delete':
+        case 'Backspace':
+          if (activeObject) canvas.remove(activeObject);
+          break;
+        case 'c':
+          if (e.ctrlKey && activeObject) {
+            activeObject.clone((cloned) => {
+              window.copiedObject = cloned;
+            });
+          }
+          break;
+        case 'v':
+          if (e.ctrlKey && window.copiedObject) {
+            window.copiedObject.clone((clonedObj) => {
+              clonedObj.set({
+                left: (clonedObj.left || 0) + 20,
+                top: (clonedObj.top || 0) + 20
+              });
+              canvas.add(clonedObj);
+              canvas.setActiveObject(clonedObj);
+            });
+          }
+          break;
+        case 'ArrowLeft':
+          if (activeObject) moveObject(activeObject, -5, 0);
+          break;
+        case 'ArrowUp':
+          if (activeObject) moveObject(activeObject, 0, -5);
+          break;
+        case 'ArrowRight':
+          if (activeObject) moveObject(activeObject, 5, 0);
+          break;
+        case 'ArrowDown':
+          if (activeObject) moveObject(activeObject, 0, 5);
+          break;
+        default:
+          return;
+      }
+    };
+
+    const moveObject = (obj, dx, dy) => {
+      obj.set('left', obj.left + dx);
+      obj.set('top', obj.top + dy);
+      obj.setCoords();
+      fabricCanvasRef.current.renderAll();
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      fabricCanvasRef.current?.dispose();
+    };
+  }, []);
+
+  return (
+    <div>
+      <h3>Fabric.js Canvas with Hotkeys</h3>
+      <canvas id="canvas" ref={canvasRef} width={800} height={600} />
+      <p>Hotkeys: Delete — remove, Ctrl+C — copy, Ctrl+V — paste, Arrows — move</p>
+    </div>
+  );
+}
+
+export default FabricCanvasWithHotkeys;

@@ -66,7 +66,6 @@ function Panel({ hideForm, setHideForm, setShowBlock }) {
     let response = await fetch(link);
     let blob = await response.blob();
     refLink.current.href = URL.createObjectURL(blob);
-    alert(refLink.current.href);
     refLink.current.click();
     navigate("/");
   }
@@ -115,7 +114,7 @@ function Panel({ hideForm, setHideForm, setShowBlock }) {
       <button onClick={handleSave} className="save">
         Сохранить изображение
       </button>
-      <a download={"image.png"} href={""} ref={refLink}></a>
+      <a className="hide" download={"image.png"} href={""} ref={refLink}></a>
       <Tooltip />
     </div>
   );

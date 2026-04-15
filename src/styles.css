@@ -29,7 +29,6 @@ address {
 }
 
 #main {
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -37,9 +36,7 @@ address {
 	}
 	
 h1 {
-	margin-bottom: 30px;
 	padding: 10px;
-	width: 100%;
 	background-image: linear-gradient(to bottom, #8DACFF, #FFFFFF);
 	background-repeat: no-repeat;
 	font-family: Arial;

@@ -33,11 +33,15 @@
 .create .select {
   margin-bottom: 30px;
   padding: 10px;
-  width: 40%;
+  width: 50%;
   border: 1px solid #4269ff;
   border-radius: 5px;
   font-size: 1.5rem;
   transition: border-color 0.5s linear;
+}
+
+.create .select option {
+  padding: 10px;
 }
 
 .create select:focus {

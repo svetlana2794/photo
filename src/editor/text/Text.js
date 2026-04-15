@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Dropdown, SelectButton, ToggleButton } from 'primereact';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faB, faItalic, faUnderline } from "@fortawesome/free-solid-svg-icons";
+import { Dropdown, ToggleButton, Textarea } from 'primereact';
 
 import { useStore } from "../../utils/store.js";
 
@@ -13,8 +15,13 @@ function Text() {
   const [checkBold, setCheckBold] = useState(false);
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
-  const [checkThrough, setCheckThrough] = useState(false);
-  const [checkOver, setCheckOver] = useState(false);
+  
+  const font = ["Times New Roman", "Monospace", "Arial"];
+  const options = [
+        { icon: 'Кисть', value: 'underline' },
+        { icon: 'Круги', value: 'linethrough' },
+        { icon: 'Спрей', value: 'overline' }
+    ];
 
   useEffect(() => {
     if (selObj) {
@@ -51,92 +58,59 @@ function Text() {
   return (
     <>
       <label className="label">Текст: </label>
-      <textarea
-        value={text}
-        onChange={(e) => {
+      
+      <Textarea value={text} onChange={(e) => {
           setText(e.target.value);
           handleText(e);
-        }}
-        name="text"
-      />
-      <br />
-      <label className="label">Шрифт: </label>
-      <select
-        name="fontFamily"
-        onChange={(e) => {
+        }} name="text"/>
+      
+      <Dropdown
+        value={family}
+  onChange={(e) => {
           setFamily(e.target.value);
           handleText(e);
         }}
-      >
-        <option>Times New Roman</option>
-        <option>Arial</option>
-        <option>Monospace</option>
-        <option>Comic Sans</option>
-      </select>
+  options={font}
+  className="select"
+  name="fontFamily"
+/>
       <br />
-      <label style={{ backgroundColor: checkBold ? "#1949FF" : "#6988FF" }}>
-        <input
-          type="checkbox"
-          value={!checkBold ? "bold" : "normal"}
-          name="fontWeight"
-          checked={checkBold}
-          onChange={(e) => {
+      
+      <ToggleButton
+  checked={checkBold}
+  value={!checkBold ? "bold" : "normal"}
+  onChange={(e) => {
             setCheckBold(!checkBold);
             handleText(e);
           }}
-        />
-        Полужирный
-      </label>
-      <label style={{ backgroundColor: checkItalic ? "#1949FF" : "#6988FF" }}>
-        <input
-          type="checkbox"
-          value={!checkItalic ? "italic" : "normal"}
-          name="fontStyle"
-          checked={checkItalic}
-          onChange={(e) => {
+  onIcon={<FontAwesomeIcon icon={faB} />}
+  offIcon={<FontAwesomeIcon icon={faB} />}
+  name="fontWeight"
+/>
+      
+      <ToggleButton
+  checked={checkItalic}
+   value={!checkItalic ? "italic" : "normal"}
+  onChange={(e) => {
             setCheckItalic(!checkItalic);
             handleText(e);
           }}
-        />
-        Курсив
-      </label>
-      <br />
-      <label style={{ backgroundColor: checkUnder ? "#1949FF" : "#6988FF" }}>
-        <input
-          type="checkbox"
-          name="underline"
-          checked={checkUnder}
-          onChange={(e) => {
+  onIcon={<FontAwesomeIcon icon={faItalic} />}
+  offIcon={<FontAwesomeIcon icon={faItalic} />}
+  name="fontStyle"
+/>
+      
+      <ToggleButton
+  checked={checkUnder}
+  onChange={(e) => {
             setCheckUnder(!checkUnder);
             handleDecor(e);
-          }}
-        />
-        Подчеркнутый
-      </label>
-      <label style={{ backgroundColor: checkThrough ? "#1949FF" : "#6988FF" }}>
-        <input
-          type="checkbox"
-          name="linethrough"
-          checked={checkThrough}
-          onChange={(e) => {
-            setCheckThrough(!checkThrough);
-            handleDecor(e);
-          }}
-        />
-        Зачеркнутый
-      </label>
-      <label style={{ backgroundColor: checkOver ? "#1949FF" : "#6988FF" }}>
-        <input
-          type="checkbox"
-          name="overline"
-          checked={checkOver}
-          onChange={(e) => {
-            setCheckOver(!checkOver);
-            handleDecor(e);
-          }}
-        />
-        Надчеркнутый
-      </label>
+          }
+  onIcon={<FontAwesomeIcon icon={faUnderline} />}
+  offIcon={<FontAwesomeIcon icon={faUnderline} />}
+  name="underline"
+/>
+      
     </>
   );
 }
