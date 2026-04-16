@@ -50,7 +50,6 @@ function Fill({ prop }) {
       <br />
       <label className="label">
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
-      <br />
       Прозрачность </label>
       
     </p>

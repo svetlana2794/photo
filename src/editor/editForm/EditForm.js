@@ -34,19 +34,19 @@ function EditForm({ hideForm, setHideForm, showBlock }) {
       style={{ display: hideForm && "none" }}
       onSubmit={handleSubmit}
     >
-      <fieldset hidden={showBlock.text} className="text">
+      <fieldset hidden={showBlock.text} id="text">
         <legend>Текст</legend>
         <Text />
       </fieldset>
-      <fieldset className="stroke" hidden={showBlock.stroke}>
+      <fieldset id="stroke" hidden={showBlock.stroke}>
         <legend>Контур</legend>
         <Stroke add={showBlock.add} />
       </fieldset>
-      <fieldset className="fill" hidden={showBlock.fill}>
+      <fieldset id="fill" hidden={showBlock.fill}>
         <legend>Заливка</legend>
         <Fill prop={"fill"} />
       </fieldset>
-      <fieldset className="brush" hidden={showBlock.brush}>
+      <fieldset id="brush" hidden={showBlock.brush}>
         <legend>Кисть</legend>
         <Brush />
       </fieldset>
