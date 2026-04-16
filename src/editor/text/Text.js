@@ -42,7 +42,7 @@ function Text() {
   }
 
   function handleDecor(e) {
-    selObj.set(e.name, e.checked);
+    selObj.set(e.target.name, e.target.checked);
     canvas.requestRenderAll();
   }
 
@@ -54,6 +54,8 @@ function Text() {
           setText(e.target.value);
           handleText(e);
         }} name="text"/>
+       
+       <br />
       
       <Dropdown
         value={family}
@@ -65,7 +67,7 @@ function Text() {
   className="select"
   name="fontFamily"
 />
-      <br />
+      
       
       <ToggleButton
       onLabel=""
