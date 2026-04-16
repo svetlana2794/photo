@@ -76,27 +76,28 @@ function Brush() {
   let style={
 width: brushSize+"px",
 height: brushSize+"px",
-background: color,
+background: "#"+color,
 opacity: alpha
 }
 
   return (
     <>
-    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"/>
+    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label" className="draw"/>
     
     <br />
      
-     <label>
+     <label className="label">
       <ColorPicker value={color} onChange={handleColor} inline/>
+      <br />
       Цвет</label>
 
       <br />
       
-      <label>
+      <label className="label">
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>
       Прозрачность </label>
       
-      <label>
+      <label className="label">
       <Slider
     value={brushSize}
     onChange={handleSizeBrush}
@@ -105,6 +106,7 @@ opacity: alpha
     step={1}
     className="my-slider"
 />
+<br />
 Размер кисти: <span className="size" style={style}></span> </label>
     </>
   );

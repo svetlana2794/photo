@@ -15,21 +15,20 @@
 }
 
 .create form {
-	width: 300px;
+	width: 400px;
   padding: 10px;
 }
 
 .create span {
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   font-size: 1.5rem;
-  text-align: right;
   display: inline-block;
 }
 
 .create .select {
   margin-bottom: 30px;
   padding: 10px;
-  width: 10%;
   border: 1px solid #4269ff;
   border-radius: 5px;
   font-size: 1.5rem;
@@ -47,7 +46,6 @@
 .create button {
   margin-top: 30px;
   padding: 10px;
-  width: 30%;
   border: none;
   border-radius: 10px;
   background: #4269ff;

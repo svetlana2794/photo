@@ -36,24 +36,25 @@ function Text() {
     };
   }, [selObj]);
 
-  function handleText(e) {
-    selObj.set(e.target.name, e.target.value);
+  function handleText(n, v) {
+    selObj.set(n, v);
     canvas.requestRenderAll();
   }
 
-  function handleDecor(e) {
-    selObj.set(e.target.name, e.target.checked);
+  function handleDecor(n, c) {
+    selObj.set(n, c);
     canvas.requestRenderAll();
   }
 
   return (
     <>
-      <label className="label">Текст: </label>
+      <label style={{vertical-align: "top"}}>Текст: 
       
       <InputTextarea value={text} onChange={(e) => {
           setText(e.target.value);
-          handleText(e);
-        }} name="text"/>
+          handleText("text", e.target.value);
+        }} style={{marginLeft: "10px"}}/>
+        </label>
        
        <br />
       
@@ -61,41 +62,35 @@ function Text() {
         value={family}
   onChange={(e) => {
           setFamily(e.target.value);
-          handleText(e);
+          handleText("fontFamily", e.target.value);
         }}
   options={font}
   className="select"
-  name="fontFamily"
 />
-      
+
+      <br />
       
       <ToggleButton
       onLabel=""
         offLabel=""
   checked={checkBold}
-  value={!checkBold ? "bold" : "normal"}
   onChange={(e) => {
             setCheckBold(!checkBold);
-            handleText(e);
+            handleText("fontWeight", !checkBold ? "bold" : "normal");
           }}
   onIcon={<FontAwesomeIcon icon={faB} />}
-  offIcon={<FontAwesomeIcon icon={faB} />}
-  name="fontWeight"
-/>
+  offIcon={<FontAwesomeIcon icon={faB} />} className="toggle"/>
       
       <ToggleButton
       onLabel=""
         offLabel=""
   checked={checkItalic}
-   value={!checkItalic ? "italic" : "normal"}
   onChange={(e) => {
             setCheckItalic(!checkItalic);
-            handleText(e);
+            handleText("fontStyle", !checkItalic ? "italic" : "normal");
           }}
   onIcon={<FontAwesomeIcon icon={faItalic} />}
-  offIcon={<FontAwesomeIcon icon={faItalic} />}
-  name="fontStyle"
-/>
+  offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle"/>
       
       <ToggleButton
       onLabel=""
@@ -103,12 +98,10 @@ function Text() {
   checked={checkUnder}
   onChange={(e) => {
             setCheckUnder(!checkUnder);
-            handleDecor(e);
+            handleDecor("underline", checkUnder);
           }}
   onIcon={<FontAwesomeIcon icon={faUnderline} />}
-  offIcon={<FontAwesomeIcon icon={faUnderline} />}
-  name="underline"
-/>
+  offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle"/>
       
     </>
   );
