@@ -1,7 +1,7 @@
 .textarea,
 .select {
-  margin: 5px;
-  padding: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
   border: 1px solid #4269ff;
   border-radius: 5px;
 }
@@ -11,11 +11,11 @@ width: 150px;
 }
 
 .select {
-width: 200px;
+width: 300px;
 }
 
-.select option {
-padding: 5px;
+.select .p-dropdiwn-items {
+  padding: 10px;
 }
 
 .text label {
@@ -26,5 +26,4 @@ padding: 5px;
 .toggle {
 margin: 5px;
 padding: 5px;
-border: 1px solid #4269ff;
 }

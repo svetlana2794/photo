@@ -19,9 +19,9 @@ function Brush() {
   const selObj = useStore((state) => state.selObj);
   
   const options = [
-        { label: 'Кисть', value: 'pencil' },
-        { label: 'Круги', value: 'circle' },
-        { label: 'Спрей', value: 'spray' }
+        { label: 'Кисть', value: 'pencil', styleClass: "draw" },
+        { label: 'Круги', value: 'circle', styleClass: "draw" },
+        { label: 'Спрей', value: 'spray', styleClass: "draw" }
     ];
     
 
@@ -73,16 +73,20 @@ function Brush() {
     canvas.requestRenderAll();
   }
   
-  let style={
-width: brushSize+"px",
-height: brushSize+"px",
-background: "#"+color,
-opacity: alpha
+  const passThrough={
+handle: {
+style: {
+	width: `${brushSize}px`,
+	height: `${brushSize}px`,
+	borderRadius: "50%",
+	transition: "all 0.2s ease"
+}
+}
 }
 
   return (
     <>
-    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label" className="draw"/>
+    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label" />
     
     <br />
      
@@ -104,10 +108,11 @@ opacity: alpha
     min={1}
     max={20}
     step={1}
+    pt={passThrough}
     className="my-slider"
 />
 <br />
-Размер кисти: <span className="size" style={style}></span> </label>
+Размер кисти</label>
     </>
   );
 }

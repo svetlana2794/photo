@@ -48,13 +48,10 @@ function Text() {
 
   return (
     <>
-      <label style={{verticalAlign: "top"}}>Текст: 
-      
       <InputTextarea value={text} onChange={(e) => {
           setText(e.target.value);
           handleText("text", e.target.value);
-        }} style={{marginLeft: "10px"}}/>
-        </label>
+        }} className="textarea"/>
        
        <br />
       
@@ -98,7 +95,7 @@ function Text() {
   checked={checkUnder}
   onChange={(e) => {
             setCheckUnder(!checkUnder);
-            handleDecor("underline", checkUnder);
+            handleDecor("underline", e.value);
           }}
   onIcon={<FontAwesomeIcon icon={faUnderline} />}
   offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle"/>
