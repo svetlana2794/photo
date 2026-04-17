@@ -64,8 +64,6 @@ function Text() {
   options={font}
   className="select"
 />
-
-      <br />
       
       <ToggleButton
       onLabel=""

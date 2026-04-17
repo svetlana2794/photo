@@ -15,7 +15,7 @@ function Create() {
       <h3>Размер холста</h3>
       <Form method="post">
         <Dropdown value={selectedWidth}
-  onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="select"/>
+  onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="size"/>
 <span>px</span>
 <span style={{marginTop: "5px"}}><i class="pi pi-times" style={{fontSize: "2.5rem"}}></i></span>
         <Dropdown
@@ -23,7 +23,7 @@ function Create() {
   onChange={(e) => setSelectedHeight(e.value)}
   name="height"
   options={size}
-  className="select"
+  className="size"
 />
 <span>px</span>
         <br />

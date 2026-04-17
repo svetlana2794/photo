@@ -7,14 +7,14 @@
 }
 
 .textarea {
-width: 150px;
+width: 300px;
 }
 
 .select {
 width: 300px;
 }
 
-.select .p-dropdiwn-items {
+.select .p-dropdiwn-item {
   padding: 10px;
 }
 
@@ -26,4 +26,5 @@ width: 300px;
 .toggle {
 margin: 5px;
 padding: 5px;
+border: 1px solid #4269ff;
 }

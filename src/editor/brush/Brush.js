@@ -19,9 +19,9 @@ function Brush() {
   const selObj = useStore((state) => state.selObj);
   
   const options = [
-        { label: 'Кисть', value: 'pencil', styleClass: "draw" },
-        { label: 'Круги', value: 'circle', styleClass: "draw" },
-        { label: 'Спрей', value: 'spray', styleClass: "draw" }
+        { label: 'Кисть', value: 'pencil'},
+        { label: 'Круги', value: 'circle'},
+        { label: 'Спрей', value: 'spray'}
     ];
     
 
@@ -79,7 +79,9 @@ style: {
 	width: `${brushSize}px`,
 	height: `${brushSize}px`,
 	borderRadius: "50%",
-	transition: "all 0.2s ease"
+	border: "1px solid #939393",
+	transition: "all 0.2s ease",
+	transform: `translateY(${brushSize/2}px)`
 }
 }
 }

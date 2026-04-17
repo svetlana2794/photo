@@ -26,7 +26,7 @@
   display: inline-block;
 }
 
-.create .select {
+.create .size {
   margin-bottom: 30px;
   padding: 10px;
   border: 1px solid #4269ff;
@@ -35,7 +35,7 @@
   transition: border-color 0.5s linear;
 }
 
-.create .select .p-dropdiwn-items {
+.create .select .p-dropdiwn-item {
   padding: 10px;
 }
 
