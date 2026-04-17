@@ -1,12 +1,15 @@
 ..my-slider {
 	margin-bottom: 10px;
 width: 150px;
-background: #C7C7C7;
 }
+
+.p-selectbutton {
+	margin-top: 10px;
+	}
 	
 .p-selectbutton .p-button {
 	padding: 10px;
 	border-color: #4269ff;
-	font-size: 1.5em;
+	color: #4269ff;
 	}
 

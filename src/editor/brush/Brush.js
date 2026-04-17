@@ -81,7 +81,7 @@ style: {
 	borderRadius: "50%",
 	border: "1px solid #939393",
 	transition: "all 0.2s ease",
-	transform: `translateY(${brushSize/2}px)`
+	transform: `translateY(-${brushSize/2}px)`
 }
 }
 }

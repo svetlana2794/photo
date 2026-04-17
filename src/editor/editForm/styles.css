@@ -34,6 +34,7 @@ legend {
 }
 
 .label {
+	margin-bottom: 10px;
 	display: inline-block;
 	padding: 5px;
 	text-align: center;
