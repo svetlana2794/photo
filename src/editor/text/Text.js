@@ -48,7 +48,7 @@ function Text() {
 
   return (
     <>
-      <label style={{vertical-align: "top"}}>Текст: 
+      <label style={{verticalAlign: "top"}}>Текст: 
       
       <InputTextarea value={text} onChange={(e) => {
           setText(e.target.value);
