@@ -18,7 +18,7 @@ function Create() {
         <Dropdown value={selectedWidth}
   onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="size"/>
 <span>px</span>
-<span style={{fontSize: "2rem"}}><i class="pi pi-times"></i></span>
+<span style={{fontSize: "18px"}}><i class="pi pi-times"></i></span>
         <Dropdown
         value={selectedHeight}
   onChange={(e) => setSelectedHeight(e.value)}

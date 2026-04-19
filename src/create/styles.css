@@ -22,14 +22,12 @@
 .create p {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 	}
 
 .create span {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 10px 5px 10px 5px;
   font-size: 1.5rem;
-  display: inline-block;
 }
 
 .create .size {
