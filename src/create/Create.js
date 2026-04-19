@@ -14,10 +14,11 @@ function Create() {
     <div className="create">
       <h3>Размер холста</h3>
       <Form method="post">
+      <p>
         <Dropdown value={selectedWidth}
   onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="size"/>
 <span>px</span>
-<span><i class="pi pi-times"></i></span>
+<span className="wh"><i class="pi pi-times"></i></span>
         <Dropdown
         value={selectedHeight}
   onChange={(e) => setSelectedHeight(e.value)}
@@ -26,7 +27,7 @@ function Create() {
   className="size"
 />
 <span>px</span>
-        <br />
+        </p>
         <button>Создать</button>
       </Form>
     </div>

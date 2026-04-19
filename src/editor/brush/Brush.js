@@ -79,7 +79,8 @@ style: {
 	width: `${brushSize}px`,
 	height: `${brushSize}px`,
 	borderRadius: "50%",
-	border: "1px solid #939393",
+	border: color.toLowerCase() =="ffffff" ? "1px solid #939393" : "none",
+	backgroundColor: color,
 	transition: "all 0.2s ease",
 	transform: `translateY(-${brushSize/2}px)`
 }

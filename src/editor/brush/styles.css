@@ -1,6 +1,10 @@
-..my-slider {
+.my-slider {
 	margin-bottom: 10px;
 width: 150px;
+}
+
+.my-slider .p-slider-range {
+background-color: none;
 }
 
 .p-selectbutton {
@@ -11,5 +15,9 @@ width: 150px;
 	padding: 10px;
 	border-color: #4269ff;
 	color: #4269ff;
+	}
+	
+.p-selectbutton-button.p-highlight {
+	color: #ffffff;
 	}
 
