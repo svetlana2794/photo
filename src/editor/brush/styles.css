@@ -4,7 +4,7 @@ width: 150px;
 }
 
 .my-slider .p-slider-range {
-background-color: none;
+background-color: transparent;
 }
 
 .p-selectbutton {
@@ -17,7 +17,7 @@ background-color: none;
 	color: #4269ff;
 	}
 	
-.p-selectbutton-button.p-highlight {
+.p-selectbutton-button .p-highlight {
 	color: #ffffff;
 	}
 
