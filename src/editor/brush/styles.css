@@ -17,7 +17,7 @@ background-color: transparent;
 	color: #4269ff;
 	}
 	
-.p-selectbutton-button .p-button.p-highlight {
+.p-selectbutton-button .p-button:checked{
 	color: #ffffff;
 	}
 

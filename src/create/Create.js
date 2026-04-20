@@ -24,12 +24,12 @@ pt={{
       fontSize: '1rem'
     },
     trigger: {
-    	marginRight: "-5px"
+    	marginRight: "-10px"
 	}
   }
 }}/>
 <span>px</span>
-<span style={{fontSize: "2rem", fontWeight: "bold"}}><i class="pi pi-times"></i></span>
+<span><i class="pi pi-times"  style={{fontSize: "22px"}}></i></span>
         <Dropdown
         value={selectedHeight}
   onChange={(e) => setSelectedHeight(e.value)}

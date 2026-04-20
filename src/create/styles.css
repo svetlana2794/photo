@@ -27,21 +27,6 @@
 
 .create span {
   padding: 5px;
-  font-size: 2rem;
-}
-
-.create .size {
-  margin-bottom: 30px;
-  padding: 10px;
-  border: 1px solid #4269ff;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  transition: border-color 0.5s linear;
-}
-
-
-.create select:focus {
-  border-color: #0000ff;
 }
 
 .create button {
