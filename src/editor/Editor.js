@@ -44,7 +44,7 @@ if (e.ctrlKey && e.key=="c") {
 	selObj.clone(function(clonedObj) {
 		copyObj=clonedObj
 		copyObj.set({
-			top: copyObj.top.10,
+			top: copyObj.top+10,
 			left: copyObj.left+10
 			})
 		})
