@@ -24,7 +24,7 @@ pt={{
       fontSize: '1.5rem'
     },
     trigger: {
-    	margin-left: "-5px"
+    	marginLeft: "-5px"
 	}
   }
 }}/>
@@ -43,7 +43,7 @@ pt={{
       fontSize: '1.5rem'
     },
     trigger: {
-    	margin-left: "-5px"
+    	marginLeft: "-5px"
 	}
   }
 }}

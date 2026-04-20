@@ -97,7 +97,7 @@ padding: "5px",
 		border: "1px solid #4269ff",
 		}
 	}}
-}/>
+/>
       
       <ToggleButton
       onLabel=""
