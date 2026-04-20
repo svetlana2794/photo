@@ -91,10 +91,12 @@ function Text() {
 	style: {
 		margin: "5px",
 padding: "5px",
-		},
+		}
+},
 		indicator: {
 	style: {
 		border: "1px solid #4269ff",
+		}
 		}
 	}}
 />
