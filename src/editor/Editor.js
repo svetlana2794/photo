@@ -84,7 +84,7 @@ if (e.key== "-") {
 	selObj.left+=center.x-newCenter.x
 	selObj.setCoords()
 	}
-	canvas requestRenderAll()
+	canvas.requestRenderAll()
 })
 
     return () => {
