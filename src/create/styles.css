@@ -22,12 +22,12 @@
 .create p {
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 	}
 
 .create span {
-  padding: 15px 5px 15px 5px;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 2rem;
 }
 
 .create .size {
@@ -39,9 +39,6 @@
   transition: border-color 0.5s linear;
 }
 
-.create .select .p-dropdown-item {
-  padding: 10px;
-}
 
 .create select:focus {
   border-color: #0000ff;

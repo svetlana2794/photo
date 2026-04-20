@@ -89,14 +89,7 @@ style: {
 
   return (
     <>
-    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"
-pt={{
-    activeButton: {
-      style: {
-        color: 'white'
-      }
-    }
-  }}/>
+    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"/>
     
     <br />
      

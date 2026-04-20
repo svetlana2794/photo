@@ -67,10 +67,10 @@ function Text() {
   item: {
     style: {
       padding: '5px',
-      fontSize: '1.5rem'
+      fontSize: '1rem'
     },
     trigger: {
-    	marginLeft: "-5px"
+    	marginRight: "-10px"
 	}
   }
 }}/>
@@ -87,14 +87,10 @@ function Text() {
           }}
   onIcon={<FontAwesomeIcon icon={faB} />}
   offIcon={<FontAwesomeIcon icon={faB} />} pt={{
-  	root: {
-style: {
-		margin: "5px",
-padding: "5px"
-		}
-},
-		indicator: {
+  	indicator: {
 	style: {
+		margin: "5px",
+padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}
@@ -111,14 +107,10 @@ padding: "5px"
           }}
   onIcon={<FontAwesomeIcon icon={faItalic} />}
   offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle" pt={{
-  	root: {
-style: {
-		margin: "5px",
-padding: "5px"
-		}
-},
-		indicator: {
+  	indicator: {
 	style: {
+		margin: "5px",
+padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}
@@ -134,14 +126,10 @@ padding: "5px"
           }}
   onIcon={<FontAwesomeIcon icon={faUnderline} />}
   offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle" pt={{
-  	root: {
-style: {
-		margin: "5px",
-padding: "5px"
-		}
-},
-		indicator: {
+  	indicator: {
 	style: {
+		margin: "5px",
+padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}

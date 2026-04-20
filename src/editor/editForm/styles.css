@@ -5,8 +5,7 @@
   height: 850px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  overflow-y: auto;
+  align-items: stretch;
 }
 
 #editForm > p {

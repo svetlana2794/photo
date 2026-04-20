@@ -21,15 +21,15 @@ pt={{
   item: {
     style: {
       padding: '5px',
-      fontSize: '1.5rem'
+      fontSize: '1rem'
     },
     trigger: {
-    	marginLeft: "-5px"
+    	marginRight: "-5px"
 	}
   }
 }}/>
 <span>px</span>
-<span style={{fontSize: "22px", fontWeight: "bold"}}><i class="pi pi-times"></i></span>
+<span style={{fontSize: "2rem", fontWeight: "bold"}}><i class="pi pi-times"></i></span>
         <Dropdown
         value={selectedHeight}
   onChange={(e) => setSelectedHeight(e.value)}
@@ -40,10 +40,10 @@ pt={{
   item: {
     style: {
       padding: '5px',
-      fontSize: '1.5rem'
+      fontSize: '1rem'
     },
     trigger: {
-    	marginLeft: "-5px"
+    	marginRight: "-10px"
 	}
   }
 }}
