@@ -89,12 +89,12 @@ function Text() {
   offIcon={<FontAwesomeIcon icon={faB} />} pt={{
   	root: {
 	style: {
-		margin: 5px,
-padding: 5px,
+		margin: "5px",
+padding: "5px",
 		},
 		indicator: {
 	style: {
-		border: 1px solid #4269ff,
+		border: "1px solid #4269ff",
 		}
 	}}
 }/>
@@ -108,7 +108,17 @@ padding: 5px,
             handleText("fontStyle", !checkItalic ? "italic" : "normal");
           }}
   onIcon={<FontAwesomeIcon icon={faItalic} />}
-  offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle"/>
+  offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle" pt={{
+  	root: {
+	style: {
+		margin: "5px",
+padding: "5px",
+		},
+		indicator: {
+	style: {
+		border: "1px solid #4269ff",
+		}
+	}}/>
       
       <ToggleButton
       onLabel=""
@@ -119,7 +129,17 @@ padding: 5px,
             handleDecor("underline", e.value);
           }}
   onIcon={<FontAwesomeIcon icon={faUnderline} />}
-  offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle"/>
+  offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle" pt={{
+  	root: {
+	style: {
+		margin: "5px",
+padding: "5px",
+		},
+		indicator: {
+	style: {
+		border: "1px solid #4269ff",
+		}
+	}}/>
       
     </>
   );
