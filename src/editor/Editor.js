@@ -12,6 +12,7 @@ import "./styles.css";
 function Editor() {
   const canvas = useStore((state) => state.canvas);
   const setCanvas = useStore((state) => state.setCanvas);
+  const selObj = useStore((state) => state.selObj);
   const [hideForm, setHideForm] = useState(true);
   const [showBlock, setShowBlock] = useState({
     text: true,

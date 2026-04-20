@@ -9,6 +9,11 @@
   overflow-y: auto;
 }
 
+#editForm > p {
+	display: flex;
+  justify-content: flex-end;
+}
+
 #editForm > div {
   align-self: flex-end;
 }
@@ -39,8 +44,3 @@ legend {
 	padding: 5px;
 	text-align: center;
 	}
-
-.p-colorpicker {
-  transform: none !important;
-  position: static !important;
-}

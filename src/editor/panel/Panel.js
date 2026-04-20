@@ -73,7 +73,7 @@ function Panel({ hideForm, setHideForm, setShowBlock }) {
   return (
     <div id="panel" style={{ display: !hideForm && "none" }}>
       <Link to={"/"}>
-        Закрыть
+      <Tooltip />
         <FontAwesomeIcon icon={faClose} size="1x" color="#4269FF" />
       </Link>
       <button
@@ -115,7 +115,6 @@ function Panel({ hideForm, setHideForm, setShowBlock }) {
         Сохранить изображение
       </button>
       <a className="hide" download={"image.png"} href={""} ref={refLink}></a>
-      <Tooltip />
     </div>
   );
 }

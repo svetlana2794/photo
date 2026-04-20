@@ -16,15 +16,37 @@ function Create() {
       <Form method="post">
       <p>
         <Dropdown value={selectedWidth}
-  onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="size"/>
+  onChange={(e) => setSelectedWidth(e.value)} name="width" options={size} className="size"
+pt={{
+  item: {
+    style: {
+      padding: '5px',
+      fontSize: '1.5rem'
+    },
+    trigger: {
+    	margin-left: "-5px"
+	}
+  }
+}}/>
 <span>px</span>
-<span style={{fontSize: "18px"}}><i class="pi pi-times"></i></span>
+<span style={{fontSize: "22px", fontWeight: "bold"}}><i class="pi pi-times"></i></span>
         <Dropdown
         value={selectedHeight}
   onChange={(e) => setSelectedHeight(e.value)}
   name="height"
   options={size}
   className="size"
+  pt={{
+  item: {
+    style: {
+      padding: '5px',
+      fontSize: '1.5rem'
+    },
+    trigger: {
+    	margin-left: "-5px"
+	}
+  }
+}}
 />
 <span>px</span>
         </p>

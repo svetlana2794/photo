@@ -79,7 +79,7 @@ style: {
 	width: `${brushSize}px`,
 	height: `${brushSize}px`,
 	borderRadius: "50%",
-	border: color.toLowerCase() == "ffffff" ? "1px solid #939393" : "none",
+	border:  "1px solid #B3B3B3",
 	backgroundColor: "#"+color,
 	transition: "all 0.2s ease",
 	transform: `translateY(-${brushSize/2}px)`
@@ -89,7 +89,14 @@ style: {
 
   return (
     <>
-    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label" />
+    <SelectButton value={value} onChange={(e) => handleChange(e.value)} options={options} optionLabel="label"
+pt={{
+    activeButton: {
+      style: {
+        color: 'white'
+      }
+    }
+  }}/>
     
     <br />
      

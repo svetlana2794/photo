@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   align-items: stretch;
-  position: relative;
 }
 
 #editor > div:first-of-type {

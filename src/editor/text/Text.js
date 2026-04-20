@@ -63,7 +63,17 @@ function Text() {
         }}
   options={font}
   className="select"
-/>
+  pt={{
+  item: {
+    style: {
+      padding: '5px',
+      fontSize: '1.5rem'
+    },
+    trigger: {
+    	margin-left: "-5px"
+	}
+  }
+}}/>
 
 <br/>
       
@@ -76,7 +86,18 @@ function Text() {
             handleText("fontWeight", !checkBold ? "bold" : "normal");
           }}
   onIcon={<FontAwesomeIcon icon={faB} />}
-  offIcon={<FontAwesomeIcon icon={faB} />} className="toggle"/>
+  offIcon={<FontAwesomeIcon icon={faB} />} pt={{
+  	root: {
+	style: {
+		margin: 5px,
+padding: 5px,
+		},
+		indicator: {
+	style: {
+		border: 1px solid #4269ff,
+		}
+	}}
+}/>
       
       <ToggleButton
       onLabel=""

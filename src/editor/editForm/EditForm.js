@@ -34,6 +34,9 @@ function EditForm({ hideForm, setHideForm, showBlock }) {
       style={{ display: hideForm && "none" }}
       onSubmit={handleSubmit}
     >
+    <p>
+    <Tooltip />
+    </p>
       <fieldset hidden={showBlock.text} id="text">
         <legend>Текст</legend>
         <Text />
@@ -54,7 +57,6 @@ function EditForm({ hideForm, setHideForm, showBlock }) {
         <button onClick={handleRemove}>Удалить</button>
         <button onClick={handleApply}>Применить</button>
       </div>
-      <Tooltip />
     </form>
   );
 }
