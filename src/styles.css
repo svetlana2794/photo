@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'Buka Bird'; 
+  src: url('/font/Buka-Bird.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Futura'; 
+  src: url('/font/Futura.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Kvadrat'; 
+  src: url('/font/Kvadrat.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Preciosa Valeria'; 
+  src: url('/font/Preciosa-Valeria.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Sporefunkfont Regular'; 
+  src: url('/font/Sporefunkfont-Regular.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Tilda Script'; 
+  src: url('/font/tilda-script-non-connect-bold.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+
 * {
 	margin: 0;
 	padding: 0;

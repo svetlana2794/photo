@@ -16,7 +16,7 @@ button#help {
   text-align: left;
   display: none;
   position: absolute;
-  bottom: 10px;
+  top: 10px;
   right: 45px;
   box-shadow: 0px 0px 10px 5px #4269ff;
   transition: display 0.5s linear;

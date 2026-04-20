@@ -72,9 +72,9 @@ function Panel({ hideForm, setHideForm, setShowBlock }) {
 
   return (
     <div id="panel" style={{ display: !hideForm && "none" }}>
+    <Tooltip />
       <Link to={"/"}>
-      <Tooltip />
-        <FontAwesomeIcon icon={faClose} size="1x" color="#4269FF" />
+        <FontAwesomeIcon icon={faClose} size="2x" color="#4269FF" />
       </Link>
       <button
         className="button"
