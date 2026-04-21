@@ -7,8 +7,18 @@ import { useStore } from "../../utils/store.js";
 
 import "./styles.css";
 
-const font = ["Times New Roman", "Monospace", "Arial", "Buka Bird", "Futura", "Preciosa", "Sporefunkfont", "Tilda Script"
+const font = ["Arial Narrow", "Monospace", "Italian Old Antiqua", "Buka Bird", "Futura", "Preciosa", "Sporefunkfont", "Tilda Script"
 ];
+
+const func=async () => {
+  	await document.fonts.load("Buka Bird");
+    await document.fonts.load("Futura");
+    await document.fonts.load("Preciosa");
+    await document.fonts.load("Sporefunkfont");
+    await document.fonts.load("Tilda Script");
+    await document.fonts.load("Arial Narrow");
+    await document.fonts.load("Italian Old Antiqua");
+    }
 
 
 function Text() {
@@ -19,6 +29,10 @@ function Text() {
   const [checkBold, setCheckBold] = useState(false);
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
+
+useEffect(() => {
+func()
+  }, [])
 
   useEffect(() => {
     if (selObj) {
@@ -37,16 +51,6 @@ function Text() {
       setCheckUnder(false);
     };
   }, [selObj]);
-  
-  useEffect(() => {
-const func=async () => {
-  	await document.fonts.load(v);
-    selObj.set("fontFamily", v);
-    canvas.requestRenderAll();
-    }
-    
-    func()
-  }, [family])
 
   function handleText(n, v) {
     selObj.set(n, v);
@@ -72,7 +76,7 @@ autoResize={false}/>
         value={family}
   onChange={(e) => {
           setFamily(e.target.value);
-          handleFamily(e.target.value)
+          handleText("fontFamily", e.target.value)
         }}
   options={font}
   className="select"

@@ -46,6 +46,22 @@
   font-display: swap; 
 }
 
+@font-face {
+  font-family: 'Arial Narrow'; 
+  src: url('font/arialnarrow.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Italian Old Antiqua'; 
+  src: url('font/Italian-Old-Antiqua.woff2') format('woff2'); 
+  font-weight: 400; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
 
 * {
 	margin: 0;
