@@ -38,11 +38,11 @@ function Text() {
     };
   }, [selObj]);
   
-  async function handleFamily(v) {
+  useEffect(async () => {
   	await document.fonts.load(v);
     selObj.set("fontFamily", v);
     canvas.requestRenderAll();
-  }
+  }, [family])
 
   function handleText(n, v) {
     selObj.set(n, v);
@@ -103,6 +103,8 @@ autoResize={false}/>
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
 border: "1px solid #4269ff"
 }
 }
@@ -126,6 +128,8 @@ border: "1px solid #4269ff"
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
 border: "1px solid #4269ff"
 }
 }
@@ -148,6 +152,8 @@ border: "1px solid #4269ff"
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
 border: "1px solid #4269ff"
 }
 }
