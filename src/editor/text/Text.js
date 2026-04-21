@@ -10,22 +10,20 @@ import "./styles.css";
 const font = ["Arial Narrow", "Monospace", "Italian Old Antiqua", "Buka Bird", "Futura", "Preciosa", "Sporefunkfont", "Tilda Script"
 ];
 
-const func=async () => {
-  	await document.fonts.load("Buka Bird");
-    await document.fonts.load("Futura");
-    await document.fonts.load("Preciosa");
-    await document.fonts.load("Sporefunkfont");
-    await document.fonts.load("Tilda Script");
-    await document.fonts.load("Arial Narrow");
-    await document.fonts.load("Italian Old Antiqua");
-    }
+const optTemplate = (option) => {
+  return (
+    <div>
+      <span style={{fontFamily: option}}>{option}</span>
+    </div>
+  );
+};
 
 
 function Text() {
   const canvas = useStore((state) => state.canvas);
   const selObj = useStore((state) => state.selObj);
   const [text, setText] = useState("text");
-  const [family, setFamily] = useState("Times New Roman");
+  const [family, setFamily] = useState("Arial Narrow");
   const [checkBold, setCheckBold] = useState(false);
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
@@ -83,6 +81,7 @@ autoResize={false}/>
         }}
   options={font}
   className="select"
+  itemTemplate={optTemplate}
   pt={{
   item: {
     style: {
