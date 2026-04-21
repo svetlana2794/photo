@@ -96,7 +96,7 @@ if (e.key== "-") {
   return (
     <div id="editor">
       <div>
-        <canvas id="canvas" ref={refCanvas} onKeyDown={hotKeys}/>
+        <canvas id="canvas" onKeyDown={hotKeys}/>
       </div>
       <Panel
         hideForm={hideForm}
