@@ -103,7 +103,7 @@ autoResize={false}/>
 },
 itemLabel: {
 	style: {
-border: 1px solid #4269ff;
+border: "1px solid #4269ff"
 }
 }
 	}}
@@ -126,7 +126,7 @@ border: 1px solid #4269ff;
 },
 itemLabel: {
 	style: {
-border: 1px solid #4269ff;
+border: "1px solid #4269ff"
 }
 }
 	}}/>
@@ -148,7 +148,7 @@ border: 1px solid #4269ff;
 },
 itemLabel: {
 	style: {
-border: 1px solid #4269ff;
+border: "1px solid #4269ff"
 }
 }
 	}}/>
