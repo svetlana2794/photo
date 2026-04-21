@@ -76,7 +76,7 @@ if (e.key== "-") {
 	selObj.setCoords()
 	}
 	canvas.requestRenderAll()
-})
+}
 
   useEffect(() => {
   	document.fonts.ready.then(() => {
