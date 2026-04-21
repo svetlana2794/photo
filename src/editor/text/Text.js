@@ -84,6 +84,7 @@ function Text() {
         }}
   options={font}
   className="select"
+  itemTemplate={optTemplate} 
   pt={{
   item: {
     style: {
@@ -112,6 +113,11 @@ function Text() {
   	style: {
 		margin: "5px"
 }
+},
+itemLabel: {
+	style: {
+border: 1px solid #4269ff;
+}
 }
 	}}
 />
@@ -129,6 +135,11 @@ function Text() {
   	root: {
   	style: {
 		margin: "5px"
+		}
+},
+itemLabel: {
+	style: {
+border: 1px solid #4269ff;
 }
 }
 	}}/>
@@ -146,6 +157,11 @@ function Text() {
   	root: {
   	style: {
 		margin: "5px"
+}
+},
+itemLabel: {
+	style: {
+border: 1px solid #4269ff;
 }
 }
 	}}/>

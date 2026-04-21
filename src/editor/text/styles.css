@@ -17,7 +17,3 @@ width: 300px;
 .select .p-dropdown-item {
   padding: 10px;
 }
-
-.p-togglebutton:not(.p-highlight) .p-button-label {
-  border: 1px solid #4269ff;
-}

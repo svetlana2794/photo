@@ -86,7 +86,7 @@ if (e.key== "-") {
       backgroundColor: "white",
     });
     setCanvas(c);
-    }).catch(err => alert("ошибка загрузки шрифтов "+err))
+    }).catch(err => alert("Ошибка загрузки шрифтов: \n"+err))
 
     return () => {
       c.dispose();

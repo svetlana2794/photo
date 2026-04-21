@@ -10,6 +10,8 @@
 
 #panel > p {
 align-self: stretch;
+display: flex;
+  justify-content: flex-end;
 }
 
 #panel > a {
