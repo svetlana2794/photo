@@ -7,27 +7,8 @@ import { useStore } from "../../utils/store.js";
 
 import "./styles.css";
 
-const font = [
-{label: "Times New Roman", value: "Times New Roman"},
-{label: "Monospace", value: "Monospace"}, 
-{label: "Arial", value: "Arial"},
-{label: "Buka Bird", value: "Buka Bird"},
-{label: "Futura", value: "Futura"},
-{label: "Kvadrat", value: "Kvadrat"},
-{label: "Preciosa", value: "Preciosa"},
-{label: "Sporefunkfont", value: "Sporefunkfont"},
-{label: "Tilda Script", value: "Tilda Script"}
+const font = ["Times New Roman", "Monospace", "Arial", "Buka Bird", "Futura", "Preciosa", "Sporefunkfont", "Tilda Script"
 ];
-
-const optTemplate = (option) => {
-  if (!option.value) {
-    return option.label;
-  } else {
-    return (
-        <span style={{ fontFamily: option.value}}>{option.label}</span>
-    );
-  }
-};
 
 
 function Text() {
@@ -56,6 +37,12 @@ function Text() {
       setCheckUnder(false);
     };
   }, [selObj]);
+  
+  async function handleFamily(v) {
+  	await document.fonts.load(v);
+    selObj.set("fontFamily", v);
+    canvas.requestRenderAll();
+  }
 
   function handleText(n, v) {
     selObj.set(n, v);
@@ -72,7 +59,8 @@ function Text() {
       <InputTextarea value={text} onChange={(e) => {
           setText(e.target.value);
           handleText("text", e.target.value);
-        }} className="textarea"/>
+        }} className="textarea"
+autoResize={false}/>
        
        <br />
       
@@ -80,11 +68,10 @@ function Text() {
         value={family}
   onChange={(e) => {
           setFamily(e.target.value);
-          handleText("fontFamily", e.target.value);
+          handleFamily(e.target.value)
         }}
   options={font}
   className="select"
-  itemTemplate={optTemplate} 
   pt={{
   item: {
     style: {

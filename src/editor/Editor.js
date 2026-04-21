@@ -79,14 +79,12 @@ if (e.key== "-") {
 }
 
   useEffect(() => {
-  	document.fonts.ready.then(() => {
     const c = new Canvas("canvas", {
       width: +searchParams.get("width"),
       height: +searchParams.get("height"),
       backgroundColor: "white",
     });
     setCanvas(c);
-    }).catch(err => alert("Ошибка загрузки шрифтов: \n"+err))
 
     return () => {
       c.dispose();

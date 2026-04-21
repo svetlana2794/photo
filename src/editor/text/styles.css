@@ -17,3 +17,7 @@ width: 300px;
 .select .p-dropdown-item {
   padding: 10px;
 }
+
+.p-togglebutton .p-button {
+	border: 1px solid #4269ff;
+	}

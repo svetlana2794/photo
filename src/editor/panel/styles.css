@@ -8,13 +8,13 @@
   align-items: center;
 }
 
-#panel > p {
+#panel p {
 align-self: stretch;
 display: flex;
   justify-content: flex-end;
 }
 
-#panel > a {
+#panel a {
   margin-top: 5px;
   margin-bottom: 40px;
   margin-right: 5px;
