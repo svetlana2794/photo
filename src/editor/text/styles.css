@@ -18,7 +18,6 @@ width: 300px;
   padding: 10px;
 }
 
-.text label {
-  padding: 15px 5px 15px 5px;
-  display: inline-block;
+.p-togglebutton:not(.p-highlight) .p-button-label {
+  border: 1px solid #4269ff;
 }

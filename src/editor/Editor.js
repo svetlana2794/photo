@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Canvas } from "fabric";
 
@@ -21,18 +21,9 @@ function Editor() {
     brush: true,
   });
   const [tooltip, setTooltip] = useState(true);
-  const refCanvas=useRef(null)
   let [searchParams, setSearchParams] = useSearchParams();
-
-  useEffect(() => {
-    const c = new Canvas("canvas", {
-      width: +searchParams.get("width"),
-      height: +searchParams.get("height"),
-      backgroundColor: "white",
-    });
-    setCanvas(c);
-    
-    refCanvas.current.addEventListener("keydown", function(e) {
+  
+  function hotKeys(e) {
     let copyObj=null
 if (!selObj) return
 
@@ -58,7 +49,7 @@ if (e.ctrlKey && e.key=="v") {
 			})
 			canvas.add(clonedObj)
 		})
-	canvas.seyActiveObject(clonedObj)
+	canvas.setActiveObject(clonedObj)
 	}
 
 if (e.key== "+") {
@@ -87,6 +78,16 @@ if (e.key== "-") {
 	canvas.requestRenderAll()
 })
 
+  useEffect(() => {
+  	document.fonts.ready.then(() => {
+    const c = new Canvas("canvas", {
+      width: +searchParams.get("width"),
+      height: +searchParams.get("height"),
+      backgroundColor: "white",
+    });
+    setCanvas(c);
+    }).catch(err => alert("ошибка загрузки шрифтов "+err))
+
     return () => {
       c.dispose();
     };
@@ -95,7 +96,7 @@ if (e.key== "-") {
   return (
     <div id="editor">
       <div>
-        <canvas id="canvas" ref={refCanvas}/>
+        <canvas id="canvas" ref={refCanvas} onKeyDown={hotKeys}/>
       </div>
       <Panel
         hideForm={hideForm}

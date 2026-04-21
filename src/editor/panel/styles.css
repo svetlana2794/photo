@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+#panel > p {
+align-self: stretch;
+}
+
 #panel > a {
   margin-top: 5px;
   margin-bottom: 40px;
@@ -17,7 +21,6 @@
   border-radius: 10px;
   color: #4269ff;
   text-decoration: none;
-  align-self: flex-end;
 }
 
 #panel>a:hover {

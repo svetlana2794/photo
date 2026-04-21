@@ -7,6 +7,29 @@ import { useStore } from "../../utils/store.js";
 
 import "./styles.css";
 
+const font = [
+{label: "Times New Roman", value: "Times New Roman"},
+{label: "Monospace", value: "Monospace"}, 
+{label: "Arial", value: "Arial"},
+{label: "Buka Bird", value: "Buka Bird"},
+{label: "Futura", value: "Futura"},
+{label: "Kvadrat", value: "Kvadrat"},
+{label: "Preciosa", value: "Preciosa"},
+{label: "Sporefunkfont", value: "Sporefunkfont"},
+{label: "Tilda Script", value: "Tilda Script"}
+];
+
+const optTemplate = (option) => {
+  if (!option.value) {
+    return option.label;
+  } else {
+    return (
+        <span style={{ fontFamily: option.value}}>{option.label}</span>
+    );
+  }
+};
+
+
 function Text() {
   const canvas = useStore((state) => state.canvas);
   const selObj = useStore((state) => state.selObj);
@@ -15,8 +38,6 @@ function Text() {
   const [checkBold, setCheckBold] = useState(false);
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
-  
-  const font = ["Times New Roman", "Monospace", "Arial", "Buka Bird", "Futura", "Kvadrat", "Preciosa", "Sporefunkfont", "Tilda Script"];
 
   useEffect(() => {
     if (selObj) {
@@ -91,13 +112,7 @@ function Text() {
   	style: {
 		margin: "5px"
 }
-},
-  	label: {
-  	style: {
-  	padding: "5px",
-		border: "1px solid #4269ff"
-		}
-		}
+}
 	}}
 />
       
@@ -115,13 +130,7 @@ function Text() {
   	style: {
 		margin: "5px"
 }
-},
-  	label: {
-  	style: {
-  	padding: "5px",
-		border: "1px solid #4269ff"
-		}
-		}
+}
 	}}/>
       
       <ToggleButton
@@ -138,13 +147,7 @@ function Text() {
   	style: {
 		margin: "5px"
 }
-},
-  	label: {
-  	style: {
-  	padding: "5px",
-		border: "1px solid #4269ff"
-		}
-		}
+}
 	}}/>
       
     </>
