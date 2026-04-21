@@ -30,10 +30,6 @@ function Text() {
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
 
-useEffect(() => {
-func()
-  }, [])
-
   useEffect(() => {
     if (selObj) {
       setText(selObj.get("text"));
@@ -51,6 +47,13 @@ func()
       setCheckUnder(false);
     };
   }, [selObj]);
+  
+  function handleFamily(v) {
+  	document.fonts.ready.then(() => {
+  selObj.set("fontFamily", v);
+    canvas.requestRenderAll();
+})
+  }
 
   function handleText(n, v) {
     selObj.set(n, v);
@@ -76,7 +79,7 @@ autoResize={false}/>
         value={family}
   onChange={(e) => {
           setFamily(e.target.value);
-          handleText("fontFamily", e.target.value)
+          handleFamily(e.target.value)
         }}
   options={font}
   className="select"
@@ -106,13 +109,14 @@ autoResize={false}/>
   offIcon={<FontAwesomeIcon icon={faB} />} pt={{
   	root: {
   	style: {
-  	paddingTop: "10px",
-		paddingBottom: "10px",
 		margin: "5px"
 }
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
+		display: "inline-block",
 border: "1px solid #4269ff"
 }
 }
@@ -131,13 +135,14 @@ border: "1px solid #4269ff"
   offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle" pt={{
   	root: {
   	style: {
-  	paddingTop: "10px",
-		paddingBottom: "10px",
 		margin: "5px"
 		}
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
+		display: "inline-block",
 border: "1px solid #4269ff"
 }
 }
@@ -155,13 +160,14 @@ border: "1px solid #4269ff"
   offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle" pt={{
   	root: {
   	style: {
-  	paddingTop: "10px",
-		paddingBottom: "10px",
 		margin: "5px"
 }
 },
 itemLabel: {
 	style: {
+		paddingTop: "10px",
+		paddingBottom: "10px",
+		display: "inline-block",
 border: "1px solid #4269ff"
 }
 }
