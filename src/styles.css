@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'Preciosa Valeria'; 
+  font-family: 'Preciosa'; 
   src: url('font/Preciosa-Valeria.woff2') format('woff2'); 
   font-weight: 400; 
   font-style: normal; 
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'Sporefunkfont Regular'; 
+  font-family: 'Sporefunkfont'; 
   src: url('font/Sporefunkfont-Regular.woff2') format('woff2'); 
   font-weight: 400; 
   font-style: normal; 

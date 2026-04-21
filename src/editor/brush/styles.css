@@ -16,8 +16,9 @@ background-color: transparent;
 	border-color: #4269ff;
 	color: #4269ff;
 	}
-	
-.p-selectbutton-button .p-button:checked{
-	color: #ffffff;
-	}
+	.p-selectbutton .p-button.p-highlight .p-button-label {
+  color: white !important;
+}
+
+
 

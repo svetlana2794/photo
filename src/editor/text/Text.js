@@ -16,7 +16,7 @@ function Text() {
   const [checkItalic, setCheckItalic] = useState(false);
   const [checkUnder, setCheckUnder] = useState(false);
   
-  const font = ["Times New Roman", "Monospace", "Arial"];
+  const font = ["Times New Roman", "Monospace", "Arial", "Buka Bird", "Futura", "Kvadrat", "Preciosa", "Sporefunkfont", "Tilda Script"];
 
   useEffect(() => {
     if (selObj) {
@@ -89,12 +89,12 @@ function Text() {
   offIcon={<FontAwesomeIcon icon={faB} />} pt={{
   	root: {
   	style: {
-		margin: "5px",
-padding: "5px"
+		margin: "5px"
 }
 },
-  	indicator: {
+  	label: {
   	style: {
+  	padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}
@@ -113,12 +113,12 @@ padding: "5px"
   offIcon={<FontAwesomeIcon icon={faItalic} />} className="toggle" pt={{
   	root: {
   	style: {
-		margin: "5px",
-padding: "5px"
+		margin: "5px"
 }
 },
-  	indicator: {
+  	label: {
   	style: {
+  	padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}
@@ -136,12 +136,12 @@ padding: "5px"
   offIcon={<FontAwesomeIcon icon={faUnderline} />} className="toggle" pt={{
   	root: {
   	style: {
-		margin: "5px",
-padding: "5px"
+		margin: "5px"
 }
 },
-  	indicator: {
+  	label: {
   	style: {
+  	padding: "5px",
 		border: "1px solid #4269ff"
 		}
 		}

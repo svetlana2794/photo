@@ -48,3 +48,7 @@
 .create button:hover {
   background: #008fff;
 }
+
+.create .size {
+border: 1px solid #4269ff;
+}
