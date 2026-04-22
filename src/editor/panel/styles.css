@@ -9,14 +9,12 @@
 }
 
 #panel p {
-align-self: stretch;
-display: flex;
-  justify-content: flex-end;
+	margin-bottom: 40px;
+align-self: flex-end;
 }
 
 #panel a {
   margin-top: 5px;
-  margin-bottom: 40px;
   margin-right: 5px;
   padding: 10px;
   border: 1px solid #4269ff;
