@@ -5,6 +5,7 @@ button#help {
   border-radius: 50%;
   background: #ffffff;
   position: relative;
+  flex: 0 0 auto;
 }
 
 .tooltip {

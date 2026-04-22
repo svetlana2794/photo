@@ -4,7 +4,6 @@
   width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -20,6 +19,7 @@ align-self: flex-end;
   border-radius: 10px;
   color: #4269ff;
   text-decoration: none;
+  flex: 0 0 auto;
 }
 
 #panel>a:hover {
