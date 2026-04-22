@@ -8,18 +8,19 @@
 }
 
 #panel p {
-	margin-bottom: 40px;
-align-self: flex-end;
+	display: flex;
+	justify-content: flex-end;
+align-self: stretch;
 }
 
 #panel a {
+	margin-bottom: 40px;
   margin-right: 5px;
   padding: 10px;
   border: 1px solid #4269ff;
   border-radius: 10px;
   color: #4269ff;
   text-decoration: none;
-  flex: 0 0 auto;
 }
 
 #panel>a:hover {
