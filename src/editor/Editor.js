@@ -42,7 +42,7 @@ if (e.ctrlKey && e.key=="c") {
 	}
 	
 if (e.ctrlKey && e.key=="v") {
-	copyObjclone(function(clonedObj) {
+	copyObj.clone(function(clonedObj) {
 		clonedObj.set({
 			top: clonedObj.top+10,
 			left: clonedObj.left+10
