@@ -16,7 +16,7 @@ function Tooltip() {
         }}
       >
         <FontAwesomeIcon icon={faQuestion} size="2x" color="#4269FF" />
-        <div className="tooltip" style={{ display: toolShow && "block" }}>
+        <div id="tooltip" style={{ display: toolShow && "block" }}>
           <p>Нажмите на фигуру для редактирования.</p>
           <p>Для удаления фигуры выделите ее и нажмите клавишу <mark>Delete</mark></p>
           <p>Для копирования фигуры выделите ее, нажмите <mark>Ctrl</mark>+<mark>C</mark>, затем <mark>Ctrl</mark>+<mark>V</mark></p>

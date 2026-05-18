@@ -9,12 +9,11 @@ button#help {
   flex: 0 0 auto;
 }
 
-.tooltip {
+#tooltip {
   padding: 5px 10px;
   width: 300px;
   background: #4269ff;
   color: #ffffff;
-  all: unset;
   text-align: left;
   display: none;
   position: absolute;
