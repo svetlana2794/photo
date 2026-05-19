@@ -121,7 +121,7 @@ h1 {
 
 .p-colorpicker-preview-color {
   border-radius: inherit;
-  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.8
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
 }
 
 
