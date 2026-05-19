@@ -1,12 +1,11 @@
 #editor {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 #editor > div:first-of-type {
   margin: 25px;
   border: 1px solid #000000;
   background: #ffffff;
-  align-self: center;
 }
