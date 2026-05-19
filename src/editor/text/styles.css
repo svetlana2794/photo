@@ -28,6 +28,10 @@ width: 300px;
 	border: none;
 	color: #4269ff;
 	}
+	
+.p-togglebutton .p-button:hover{
+	background-color: #ffffff;
+	}
 
 .p-highlight.p-togglebutton {
 	background-color: #4269ff;
@@ -35,4 +39,5 @@ width: 300px;
 	
 .p-highlight.p-togglebutton .p-button{
 	background-color: #4269ff;
+	color: #ffffff;
 	}
