@@ -94,7 +94,7 @@ style: {
     <br />
      
      <label className="label">
-      <ColorPicker value={color} onChange={handleColor} inline/>
+      <ColorPicker value={color} onChange={handleColor} style={{width: "50px", height: "50px", borderRadius: "10px"}}/>
       <br />
       Цвет</label>
 
