@@ -21,9 +21,11 @@ width: 300px;
 .p-togglebutton {
 	padding: 10px;
 	border: 1px solid #4269ff;
+	border-radius: 5px;
+	color: #4269ff;
 	}
 	
-.p-button-text {
-  color: #4269ff;
-}
+.p-togglebutton .p-button{
+	border: none;
+	}
 
