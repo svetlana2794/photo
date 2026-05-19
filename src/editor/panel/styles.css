@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-#panel p {
+#panel>p {
 	display: flex;
 	justify-content: flex-end;
 align-self: stretch;

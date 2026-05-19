@@ -11,6 +11,7 @@
 #editForm > p {
 	display: flex;
   justify-content: flex-end;
+  align-self: stretch;
 }
 
 fieldset {
