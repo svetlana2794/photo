@@ -97,8 +97,6 @@ style: {
       <ColorPicker value={color} onChange={handleColor}/>
       <br />
       Цвет</label>
-
-      <br />
       
       <label className="label">
       <Knob value={alpha} onChange={handleAlpha} min={0} max={1} step={0.1}/>

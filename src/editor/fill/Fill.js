@@ -44,7 +44,7 @@ function Fill({ prop }) {
   return (
     <p className="fill">
       <label className="label">
-      <ColorPicker value={color} onChange={handleColor} inline/>
+      <ColorPicker value={color} onChange={handleColor}/>
       <br/>
 Цвет </label>
       <br />
