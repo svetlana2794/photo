@@ -94,7 +94,7 @@ style: {
     <br />
      
      <label className="label">
-      <ColorPicker value={color} onChange={handleColor} style={{width: "100px", height: "100px", borderRadius: "10px", boxShadow: "inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset 2px 2px 5px rgba(255, 255, 255, 0.8"}}/>
+      <ColorPicker value={color} onChange={handleColor}/>
       <br />
       Цвет</label>
 

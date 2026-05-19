@@ -112,4 +112,16 @@ h1 {
 	align-self: stretch;
 	text-shadow: 5px 0px 5px #0000FF, 0px 5px 5px #0000FF, -5px 0px 5px #0000FF, 0px -5px 5px #0000FF;
 	}
+	
+.p-colorpicker-preview {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.p-colorpicker-preview-color {
+  border-radius: inherit;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.8
+}
+
 
