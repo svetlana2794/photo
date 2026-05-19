@@ -29,6 +29,8 @@ if (!selObj) return
 
 if (e.key== "Delete") {
 	canvas.remove(selObj)
+	canvas.requestRenderAll()
+	e.preventDefault()
 	}
 
 if (e.ctrlKey && e.key=="c") {
@@ -39,6 +41,7 @@ if (e.ctrlKey && e.key=="c") {
 			left: copyObj.left+10
 			})
 		})
+	e.preventDefault()
 	}
 	
 if (e.ctrlKey && e.key=="v") {
@@ -50,6 +53,8 @@ if (e.ctrlKey && e.key=="v") {
 			canvas.add(clonedObj)
 		})
 	canvas.setActiveObject(clonedObj)
+	canvas.requestRenderAll()
+	e.preventDefault()
 	}
 
 if (e.key== "+") {
@@ -62,6 +67,8 @@ if (e.key== "+") {
 	selObj.top+=center.y-newCenter.y
 	selObj.left+=center.x-newCenter.x
 	selObj.setCoords()
+	canvas.requestRenderAll()
+	e.preventDefault()
 	}
 	
 if (e.key== "-") {
@@ -76,6 +83,7 @@ if (e.key== "-") {
 	selObj.setCoords()
 	}
 	canvas.requestRenderAll()
+	e.preventDefault()
 }
 
   useEffect(() => {
