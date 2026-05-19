@@ -18,6 +18,12 @@ width: 300px;
   padding: 10px;
 }
 
-.p-togglebutton .p-button {
+.p-togglebutton {
+	padding: 10px;
 	border: 1px solid #4269ff;
 	}
+	
+.p-button-text {
+  color: #4269ff;
+}
+

@@ -117,7 +117,6 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 10px;
-  box-shadow: inset 10px 10px 0px rgba(255, 255, 255, 0.5), inset -10px -10px 0px rgba(255, 255, 255, 0.8);
 }
 
 .p-colorpicker-preview-color {
